@@ -16,6 +16,7 @@ presence-tracks {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: bottom left;
+  opacity: 0.9;
 }
 
 presence-tracks table {	

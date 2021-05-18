@@ -3,6 +3,7 @@ innate-powers {
   margin-left: 22px;
   background-image: url('../../images/board/Innate_Without_Text.png');
   background-position: bottom;
+  opacity: 0.9;
 }
 innate-powers::after {
   content: '';
@@ -10,6 +11,7 @@ innate-powers::after {
   background-position: top;
   display: block;
   height: 9000px;
+  opacity: 0.9;
 }
 
 innate-powers section-title {

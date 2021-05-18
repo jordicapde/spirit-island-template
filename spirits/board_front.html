@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="../_global/css/global.css" rel="stylesheet" />
+    <link href="../_global/css/board_front.css" rel="stylesheet" />
+    <script type="text/javascript" src="../_global/js/general.js"></script>
+    <script type="text/javascript" src="../_global/js/board_front.js"></script>
+</head>
+
+<body>
+	<board spirit-image="big2.png" spirit-image-scale="300%" spirit-border="example2.png">
+    
+    <spirit-name>
+      Many Minds Move as One
+    </spirit-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>FLY FAST AS THOUGHT</special-rules-subtitle>
+      <special-rule>
+        When you Gather or Push &nbsp;{beast} , they may come from or go to lands up to 2 distant <i>(rather than adjacent only)</i>.
+      </special-rule>
+      <special-rules-subtitle>A JOINING OF SWARMS AND FLOCKS</special-rules-subtitle>
+      <special-rule>
+        Your {sacred-site} may also count as &nbsp;{beast} . <i>(<b>Note:</b> You never have more than 1 {sacred-site} in a land, no matter how many &nbsp;{presence} you have there.)</i>
+		<br><br>
+		<i>(If something changes a &nbsp;{beast} that is your {sacred-site}, it affects 2 of your {presence} there - e.g., Push 1 &nbsp;{beast} will Push 2 of your {presence} together.)</i>
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+		<growth title="Growth (pick one)">
+			<growth-group values="reclaim-all;gain-power-card"></growth-group>
+			<growth-group values="add-presence(1);add-presence(0)"></growth-group>
+			<growth-group values="add-presence(3);gain-energy(1);land-gather(2,beast)"></growth-group>
+		</growth>
+
+		<presence-tracks>
+		  <energy-track values="0,1,air,2,animal,3,4"></energy-track>
+		  <card-play-track values="1,2,energy-gain-card,3,3,4,5"></card-play-track>
+		</presence-tracks>
+
+		<innate-powers>
+		  <quick-innate-power
+			name="The teeming host arrives"
+			speed="fast"
+			range="2"
+			target="any"
+			target-title="TARGET LAND">
+			<level threshold="2-air,1-animal">
+			  Gather up to 1 &nbsp;{beast} .
+			</level>
+			<level threshold="3-air,1-water,2-animal">
+			  Instead, Gather up to 1 &nbsp;{beast} per {air} you have.
+			</level>
+			<level threshold="1-fire,4-air,2-animal">
+			  Push up to 3 &nbsp;{beast} .
+			</level>
+		  </quick-innate-power>
+		  <quick-innate-power
+		  name="Beset and confound the invaders"
+		  speed="fast"
+		  range="2"
+		  target="invaders"
+		  target-title="TARGET LAND"
+		  note="{beast} (below) checks the number of &nbsp;{beast} in target land.">
+			<level threshold="1-air,2-animal,2-beast">
+			  2 {fear} and Defend 2.
+			</level>
+			<level threshold="2-air,3-animal,3-beast">
+			  Instead, 3 {fear} and Defend 4.
+			</level>
+			<level threshold="3-air,4-animal,4-beast">
+			  Instead, 4 {fear} and Defend 7.
+			</level>
+			<level threshold="4-air,1-earth,5-animal,5-beast">
+			  Instead, 6 {fear} and Defend 10.
+			</level>
+		  </quick-innate-power>
+		</innate-powers>
+	</right>
+  </board>
+</body>
+
+</html>

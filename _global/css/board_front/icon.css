@@ -31,6 +31,13 @@ icon.jungle { background-image: url('../../images/board/jungle.png'); }
 icon.wetland { background-image: url('../../images/board/wetland.png'); }
 icon.ocean { background-image: url('../../images/board/ocean.png'); }
 
+icon.energy-gain-card { 
+	background-image: url('../../images/board/NewIcons/Card Gain 1 Energy Pay 2.png'); 
+	display: block;
+	height: 110px;
+	width: 110px;
+}
+
 icon.discard-cards {
   background-image: url('../../images/board/discard_power_cards.png');
   display: block;
@@ -338,6 +345,13 @@ icon.forget-power-card {
   display: block;
   height: 90px;
   width:90px;
+}
+
+icon.land-gather {
+  background-image: url('../../images/board/NewIcons/Land Gather.png');
+  display: block;
+  height: 100px;
+  width:100px;
 }
 
 icon.push {

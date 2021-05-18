@@ -205,6 +205,17 @@ function parseGrowthTags(){
                     }
                     break;
                 }
+				case 'land-gather':
+                    {
+                        const matches = regExp.exec(classPieces[j]);
+
+						let range = matches[0].split(",");
+						let gatherType = matches[1].split(",");
+						
+                        const pushTarget = matches[1];
+                        newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + pushTarget + "'></icon></icon><growth-text>Gather up to 1 " + gatherType + " into a Land</growth-text></growth-cell>"
+                        break;
+                    }
                 case 'push':
                     {
                         const matches = regExp.exec(classPieces[j]);
@@ -397,6 +408,10 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
 					var moveRange = matches[1];
                     inner = "{move-presence-"+moveRange+"}";
                     subText = "Move a Presence "+moveRange;
+					break;
+				case 'energy-gain-card':
+					inner = "{energy-gain-card}";
+                    subText = "Pay 2 Energy to Gain a Power Card";
 					break;
                 default:
                     // element
@@ -643,5 +658,5 @@ function parseInnatePowers(){
         }
         fullHTML += currentPowerHTML+"</description-container></innate-power>";
     }
-    document.getElementsByTagName("innate-powers")[0].innerHTML = '<section-title>Innnate Powers</section-title><innate-power-container>'+fullHTML+'</innate-power-container>';
+    document.getElementsByTagName("innate-powers")[0].innerHTML = '<section-title>Innate Powers</section-title><innate-power-container>'+fullHTML+'</innate-power-container>';
 }

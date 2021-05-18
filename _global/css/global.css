@@ -7,6 +7,14 @@
   src: url(../fonts/lato/Lato-SemiboldItalic.ttf);
   font-style: italic;
 }
+@font-face{
+  font-family: 'DK Snemand';
+  src: url(../fonts/dk_snemand/DK_Snemand.otf) format("opentype");
+}
+@font-face{
+  font-family: 'Gobold Extra2';
+  src: url(../fonts/gobold/Gobold_Extra2.otf) format("opentype");
+}
 
 icon{
   display:inline-block;

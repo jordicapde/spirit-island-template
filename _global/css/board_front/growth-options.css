@@ -6,6 +6,7 @@ growth {
   background-color: transparent;
   background-clip: border-box;
   display: block;
+  opacity: 0.9;
 }
 
 growth section-title {
@@ -73,6 +74,7 @@ growth-border {
   margin-top: -30px;
   margin-left: 10px;
   margin-right: 10px;
+  opacity: 0.9;
 }
 
 growth-border[double] {
