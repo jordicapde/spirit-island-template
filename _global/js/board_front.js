@@ -213,7 +213,7 @@ function parseGrowthTags(){
 						let gatherType = matches[1].split(",");
 						
                         const pushTarget = matches[1];
-                        newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + pushTarget + "'></icon></icon><growth-text>Gather up to 1 " + gatherType + " into a Land</growth-text></growth-cell>"
+                        newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + pushTarget + "'></icon></icon><growth-text>Gather up &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to into </growth-text></growth-cell>"
                         break;
                     }
                 case 'push':
@@ -411,7 +411,7 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
 					break;
 				case 'energy-gain-card':
 					inner = "{energy-gain-card}";
-                    subText = "Pay 2 Energy to Gain a Power Card";
+                    subText = "Pay";
 					break;
                 default:
                     // element

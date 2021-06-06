@@ -93,15 +93,15 @@ setup{
 play-style-title, complexity-title, complexity-value, div.summary-of-powers-title{
     font-family: 'DK Snemand';
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: bold;
 }
 
 setup-title {
-    font-size:33px;
+    font-size:36px;
+	font-weight: bold;
     text-align:left;
     font-family: "DK Snemand";
-    padding-left:15px;
     margin-top:80px;
 }
 
@@ -167,7 +167,7 @@ div.summary-of-powers-title{
     text-align: center;
     vertical-align: bottom;
     width:195px;
-    padding-left:40px;
+    padding-left:36px;
     padding-right:10px;
     padding-top:60px;
 }
@@ -307,4 +307,22 @@ icon.presence {
     height: 30px;
     width: 38px;
     margin-bottom: -7px;
+}
+
+icon.beast {
+  background-image: url('../images/board/beast.png');
+  height: 25px;
+  width: 35px;
+  margin-bottom: -7px;
+  margin-right: -4px;
+  margin-left: -4px;
+}
+
+icon.fear {
+  background-image: url('../images/board/fear.png');
+  width: 35px;
+  height: 35px;
+  margin-bottom: -8px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
