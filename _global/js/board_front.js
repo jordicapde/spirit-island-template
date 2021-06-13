@@ -209,11 +209,14 @@ function parseGrowthTags(){
                     {
                         const matches = regExp.exec(classPieces[j]);
 
-						let range = matches[0].split(",");
-						let gatherType = matches[1].split(",");
-						
-                        const pushTarget = matches[1];
-                        newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + pushTarget + "'></icon></icon><growth-text>Gather up &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to into </growth-text></growth-cell>"
+                        console.log(matches)
+						let range = matches[1].split(",")[0];
+						let gatherNum = matches[1].split(",")[1];
+						let gatherType = matches[1].split(",")[2];
+
+                        newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + range +
+                            "'></icon></icon><growth-text>Gather up to " + gatherNum + " " + gatherType.charAt(0).toUpperCase() + gatherType.slice(1) + "s" +
+                            " </growth-text></growth-cell>"
                         break;
                     }
                 case 'push':
@@ -272,6 +275,13 @@ function parseGrowthTags(){
                     }
 
 
+                        break;
+                    }
+                case 'raw':
+                    {
+                        const matches = regExp.exec(classPieces[j]);
+
+                        newGrowthCellHTML += `${openTag}{reclaim-all}<growth-text>` + matches[1] + `</growth-text></growth-cell>`
                         break;
                     }
                 default:
