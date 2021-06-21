@@ -215,7 +215,7 @@ function parseGrowthTags(){
 						let gatherType = matches[1].split(",")[2];
 
                         newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + range +
-                            "'></icon></icon><growth-text>Gather up to " + gatherNum + " " + gatherType.charAt(0).toUpperCase() + gatherType.slice(1) + "s" +
+                            "'></icon></icon><growth-text>" +
                             " </growth-text></growth-cell>"
                         break;
                     }
@@ -281,7 +281,7 @@ function parseGrowthTags(){
                     {
                         const matches = regExp.exec(classPieces[j]);
 
-                        newGrowthCellHTML += `${openTag}{reclaim-all}<growth-text>` + matches[1] + `</growth-text></growth-cell>`
+                        newGrowthCellHTML += `${openTag}{empty}<growth-text>` + matches[1] + `</growth-text></growth-cell>`
                         break;
                     }
                 default:

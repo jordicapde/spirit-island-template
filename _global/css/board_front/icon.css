@@ -385,3 +385,9 @@ icon.make-fast {
   height: 90px;
   width:90px;
 }
+
+icon.empty {
+  display: block;
+  height: 90px;
+  width:90px;
+}

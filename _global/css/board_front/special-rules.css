@@ -14,6 +14,7 @@ special-rules-container {
   padding-left:15px;
   padding-right:15px;
   z-index: -1;
+  opacity: 0.8;
 }
 
 special-rules-subtitle {
