@@ -3,6 +3,7 @@ growth {
   background-repeat: no-repeat;
   background-position: left bottom;
   margin-top: -8px;
+  padding-bottom: 8px;
   background-color: transparent;
   background-clip: border-box;
   display: block;
@@ -187,8 +188,6 @@ growth-text {
   margin-top: 0px;
   text-align: center;
   width: 100%;
-  padding-left: 5px;
-  padding-right: 5px;
   box-sizing: border-box;
 }
 

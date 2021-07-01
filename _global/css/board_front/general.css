@@ -39,11 +39,6 @@ board {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 15.1px;
-}
-
-board.round-border {
-  border-radius: 15.1px;
 }
 
 spirit-name {
@@ -58,7 +53,7 @@ spirit-name {
   font-family: 'DK Snemand';
   text-transform: uppercase;
   color: white;
-  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 2px #000, -1px -1px 2px #000;
   vertical-align: middle;
   text-align: left;
   z-index: 1;

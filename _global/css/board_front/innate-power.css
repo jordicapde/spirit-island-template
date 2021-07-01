@@ -141,14 +141,14 @@ innate-power.fast innate-info-speed {
   background-image: url('../../images/50px-Fasticon.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 40px 30px;
+  background-size: 50px 40px;
 }
 
 innate-power.slow innate-info-speed {
   background-image: url('../../images/50px-Slowicon.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 40px 30px;
+  background-size: 50px 40px;
 }
 
 description-container {
