@@ -132,3 +132,8 @@ right{
   width: 1090px;
   overflow: hidden;
 }
+
+.shroud right {
+  left: 645px;
+  width: 1105px;
+}

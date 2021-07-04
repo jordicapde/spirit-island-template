@@ -668,5 +668,5 @@ function parseInnatePowers(){
         }
         fullHTML += currentPowerHTML+"</description-container></innate-power>";
     }
-    document.getElementsByTagName("innate-powers")[0].innerHTML = '<section-title>Innate Powers</section-title><innate-power-container>'+fullHTML+'</innate-power-container>';
+    document.getElementsByTagName("innate-powers")[0].innerHTML = '<section-title>Innnate Powers</section-title><innate-power-container>'+fullHTML+'</innate-power-container>';
 }

@@ -7,74 +7,77 @@
     <script type="text/javascript" src="../../_global/js/board_front.js"></script>
 </head>
 
-<body>
-	<board spirit-image="many_minds.jpg" spirit-border="spirit-border.png">
+<body class="shroud">
+	<board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
     
     <spirit-name>
-      Many Minds Move as One
+      Shroud of Silent Mist
     </spirit-name>
 
     <special-rules-container>
       <section-title>SPECIAL RULES</section-title>
-      <special-rules-subtitle>FLY FAST AS THOUGHT</special-rules-subtitle>
+      <special-rules-subtitle>GATHER POWER FROM THE COOL AND DARK</special-rules-subtitle>
       <special-rule>
-        When you Gather or Push &nbsp;{beast} , they may come from or go to lands up to 2 distant <i>(rather than adjacent only)</i>.
+		Once per turn, when you Gain a Power Card without &nbsp;{fire} , gain 1 Energy.
       </special-rule>
-      <special-rules-subtitle>A JOINING OF SWARMS AND FLOCKS</special-rules-subtitle>
+      <special-rules-subtitle>MISTS SHIFT AND FLOW</special-rules-subtitle>
       <special-rule>
-        Your {sacred-site} may also count as &nbsp;{beast} . <i>(<b>Note:</b> You never have more than 1 {sacred-site} in a land, no matter how many &nbsp;{presence} you have there.)</i>
-		<br><br>
-		<i>(If something changes a &nbsp;{beast} that is your {sacred-site}, it affects 2 of your {presence} there - e.g., Push 1 &nbsp;{beast} will Push 2 of your {presence} together.)</i>
+		When targeting a land with a Power, you may Gather 1 of your &nbsp;{presence} into the target or an adjacent land. This can enable you to meet Range and targeting requirements.
       </special-rule>
+	  <special-rules-subtitle>SLOW AND SILENT DEATH</special-rules-subtitle>
+	  <special-rule>
+		Invaders and {dahan} in your lands don't heal Damage.
+		  <br>
+		  <b>During Time Passes:</b> 1 &nbsp;{fear} (max. 5) per land of yours with Damaged Invaders. Gain 1 Energy per 3 lands of yours with Damaged Invaders.
+	  </special-rule>
     </special-rules-container>
 
     <right>
 		<growth title="Growth (pick one)">
 			<growth-group values="reclaim-all;gain-power-card"></growth-group>
-			<growth-group values="add-presence(1);add-presence(0)"></growth-group>
-			<growth-group values="raw(Add a Presence and Beasts);gain-energy(1);raw(Gather up to 1 Beasts into a Land)"></growth-group>
+			<growth-group values="add-presence(0);add-presence(0)"></growth-group>
+			<growth-group values="gain-power-card;add-presence(3,mountain-wetland)"></growth-group>
 		</growth>
 
 		<presence-tracks>
-		  <energy-track values="0,1,air,2,animal,3,4"></energy-track>
-		  <card-play-track values="1,2,energy-gain-card,3,3,4,5"></card-play-track>
+		  <energy-track values="0,1,water,2,air"></energy-track>
+		  <card-play-track values="1,2,move-presence(1),moon,3,4,reclaim-one,5"></card-play-track>
 		</presence-tracks>
 
 		<innate-powers>
 		  <quick-innate-power
-			name="The teeming host arrives"
-			speed="fast"
-			range="2"
+			name="SUFFOCATING SHROUD"
+			speed="slow"
+			range="0"
 			target="any"
 			target-title="TARGET LAND">
-			<level threshold="2-air,1-animal">
-			  Gather up to 1 &nbsp;{beast} .
+			<level threshold="1-moon,2-air,1-water">
+			  1 Damage.
 			</level>
-			<level threshold="3-air,1-water,2-animal">
-			  Instead, Gather up to 1 &nbsp;{beast} per {air} you have.
+			<level threshold="2-moon,3-air,2-water">
+			  For each adjacent land with your &nbsp;{presence} , 1 Damage to a different Invader.
 			</level>
-			<level threshold="1-fire,4-air,2-animal">
-			  Push up to 3 &nbsp;{beast} .
+			<level threshold="4-moon,4-air,3-water">
+			  1 Damage.
+			</level>
+			<level threshold="5-moon,6-air,4-water">
+			  1 Damage to each Invader.
 			</level>
 		  </quick-innate-power>
 		  <quick-innate-power
-		  name="Beset and confound the invaders"
-		  speed="fast"
-		  range="2"
-		  target="invaders"
-		  target-title="TARGET LAND"
-		  note="{beast} (below) checks the number of &nbsp;{beast} in target land.">
-			<level threshold="1-air,2-animal,2-beast">
-			  2 {fear} and Defend 2.
+		  name="LOST IN THE SWIRLING HAZE"
+		  speed="slow"
+		  range="0"
+		  target="any"
+		  target-title="TARGET LAND">
+			<level threshold="1-air,2-water">
+			  Push up to 1 {dahan} .
 			</level>
-			<level threshold="2-air,3-animal,3-beast">
-			  Instead, 3 {fear} and Defend 4.
+			<level threshold="2-air,3-water">
+			  Push up to 2 &nbsp;{explorer} / {dahan} .
 			</level>
-			<level threshold="3-air,4-animal,4-beast">
-			  Instead, 4 {fear} and Defend 7.
-			</level>
-			<level threshold="4-air,1-earth,5-animal,5-beast">
-			  Instead, 6 {fear} and Defend 10.
+			<level threshold="3-air,4-water">
+			  Push up to 2 &nbsp;{explorer} / {dahan} .
 			</level>
 		  </quick-innate-power>
 		</innate-powers>

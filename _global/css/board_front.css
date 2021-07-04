@@ -10,3 +10,8 @@
     font-family: 'JosefinSans-Regular';
     src: url(../fonts/josefin-sans/JosefinSans-Regular.ttf);
 }
+
+@font-face {
+    font-family: 'JosefinSans-Bold';
+    src: url(../fonts/josefin-sans/JosefinSans-Bold.ttf);
+}

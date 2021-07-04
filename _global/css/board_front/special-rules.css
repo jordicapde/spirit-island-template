@@ -17,10 +17,14 @@ special-rules-container {
   opacity: 0.8;
 }
 
+.shroud special-rules-container {
+    width: 650px;
+}
+
 special-rules-subtitle {
   padding-top: 15px;
   padding-bottom: 3px;
-  font-family: 'JosefinSans-Regular';
+  font-family: 'JosefinSans-Bold';
   font-weight: bold;
   font-style: italic;
   font-size: 14pt;
