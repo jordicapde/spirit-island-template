@@ -330,3 +330,21 @@ icon.fear-icon {
   margin-left: -5px;
   margin-right: -5px;
 }
+
+icon.dahan {
+  background-image: url('../images/board/dahan.png');
+  width: 35px;
+  height: 35px;
+  margin-bottom: -8px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+icon.fast {
+  background-image: url('../images/50px-Fasticon.png');
+  width: 35px;
+  height: 35px;
+  margin-bottom: -8px;
+  margin-left: -5px;
+  margin-right: -5px;
+}

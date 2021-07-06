@@ -159,6 +159,11 @@ function parseGrowthTags(){
                         newGrowthCellHTML += `${openTag}{gain-card-play}<growth-text>Gain a Card Play</growth-text></growth-cell>`
                         break;
                     }
+                case 'gain-energy-card-plays':
+                    {
+                        newGrowthCellHTML += `${openTag}{gain-energy-card-plays}<growth-text>Gain Energy equal to Card Plays</growth-text></growth-cell>`
+                        break;
+                    }
                 case 'make-fast':
                     {
                         newGrowthCellHTML += `${openTag}{make-fast}<growth-text>One of your Powers may be Fast</growth-text></growth-cell>`
@@ -557,8 +562,9 @@ function dynamicCellWidth() {
 
         iconCount = icon.length;
 
+        TEXTWIDTH = thresholds[i].innerText.includes("or ") ? 36 : 12;
         dynamicThresholdWidth = 
-            (iconCount * ICONWIDTH) + (iconCount * 12);
+            (iconCount * ICONWIDTH) + (iconCount * TEXTWIDTH);
         formattedWidth = dynamicThresholdWidth + "px";
         thresholds[i].style.width = formattedWidth;
     }

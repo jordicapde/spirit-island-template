@@ -59,7 +59,12 @@ special-rule icon.range-plus-1{
     height:30px
 }
 
-
+special-rule icon.range-1 {
+    width: 50px;
+    height: 30px;
+    margin-top: 0px;
+    display: inline-block;
+}
 
 special-rule dahan {
   width: 25px;

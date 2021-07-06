@@ -38,6 +38,13 @@ icon.energy-gain-card {
 	width: 110px;
 }
 
+icon.gain-energy-card-plays {
+	background-image: url('../../images/board/NewIcons/Energy Gain 1 Per Cardplay.png');
+	display: block;
+	height: 110px;
+	width: 110px;
+}
+
 icon.discard-cards {
   background-image: url('../../images/board/discard_power_cards.png');
   display: block;
