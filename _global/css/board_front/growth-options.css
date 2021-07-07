@@ -52,7 +52,7 @@ growth-table {
   display: inline-flex;
   width: 1081px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 0px;
   justify-content: space-around;
@@ -229,9 +229,9 @@ growth-cost {
   background-position: center;
   height: 50px;
   width: 50px;
-  top: -45px;
+  top: -5px;
   position: relative;
-  left: -10px;
+  left: 30px;
   padding-top: 12px;
 }
 
