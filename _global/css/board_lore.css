@@ -348,3 +348,9 @@ icon.fast {
   margin-left: -5px;
   margin-right: -5px;
 }
+
+icon.town, icon.city, icon.explorer,
+icon.disease, icon.strife, icon.badlands, icon.wilds {
+    width:25px;
+    height:25px
+}

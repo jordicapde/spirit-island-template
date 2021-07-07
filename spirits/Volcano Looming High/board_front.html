@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="../../_global/css/global.css" rel="stylesheet" />
+    <link href="../../_global/css/board_front.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../_global/js/general.js"></script>
+    <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+</head>
+
+<body>
+    <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
+
+        <spirit-name>
+            Grinning Trickster Stirs Up Trouble
+        </spirit-name>
+
+        <special-rules-container>
+            <section-title>SPECIAL RULES</section-title>
+            <special-rules-subtitle>MOUNTAIN HOME</special-rules-subtitle>
+            <special-rule>
+                Your Presenceicon.png may only be added/moved into Mountain.
+            </special-rule>
+            <special-rules-subtitle>COLLAPSE IN A BLAST OF LAVA AND STEAM</special-rules-subtitle>
+            <special-rule>
+                When your Presenceicon.png is destroyed, in that land, deal 1 Damage per destroyed Presenceicon.png to both Invaders and to Dahanicon.png.
+            </special-rule>
+            <special-rules-subtitle>VOLCANIC PEAKS TOWER OVER THE LANDSCAPE</special-rules-subtitle>
+            <special-rule>
+                Your Power Cards gain {range-1} if you have 3 or more Presenceicon.png in the origin land.
+            </special-rule>
+        </special-rules-container>
+
+        <right>
+            <growth title="Growth (pick one)">
+                <growth-group values="reclaim-all;gain-power-card;gain-energy(3)"></growth-group>
+                <growth-group values="add-presence(0);add-presence(0)"></growth-group>
+                <growth-group values="gain-power-card;add-presence(4);gain-card-play;gain-energy(3)"></growth-group>
+            </growth>
+
+            <presence-tracks>
+                <energy-track values="1,2,earth,3,4,5"></energy-track>
+                <card-play-track values="1,fire,earth,2,air,3,fire,4"></card-play-track>
+            </presence-tracks>
+
+            <innate-powers>
+                <quick-innate-power
+                        name="EXPLOSIVE ERUPTION"
+                        speed="fast"
+                        range="0"
+                        target="any"
+                        target-title="TARGET LAND"
+                        note="Destroy X (1 or more) of your Presenceicon.png in target land; Destroyedpresence.png checks how many you destroyed. This Power does Damage (separately and equally) to both Invaders and Dahanicon.png. Ranges below can't be increased.">
+                    <level threshold="2-fire,2-earth,2-air">
+                        Discard Minor Powers from the deck until you get one that targets a land. Use its text effects on target land immediately, ignoring normal Range/Targeting restrictions. All "up to" instructions must be used at max value. Treat all "OR"s as "AND"s.
+                        <br>
+                        <i>(It is not considered a card of yours/a card in play. Its effects are treated as performed by this Power, as if its text was copied here.)</i>
+                    </level>
+                    <level threshold="2-moon,1-fire,2-air">
+                        You may Forget a Power Card to gain the just-used Power Card (to hand) and 1 Energy.
+                    </level>
+                </quick-innate-power>
+                <quick-innate-power
+                        name="POWERED BY THE FURNACE OF THE EARTH"
+                        speed="slow"
+                        range="0"
+                        target="any"
+                        target-title="TARGET LAND">
+                    <level threshold="3-moon">
+                        This Power may be {slow}.
+                    </level>
+                    <level threshold="3-air">
+                        Add 1 {strife}.
+                    </level>
+                    <level threshold="3-sun,or 3-fire">
+                        1 Invader and 1 {dahan} deal Damage to each other.
+                    </level>
+                    <level threshold="3-animal">
+                        If target land has {beast} , 2 Damage. Otherwise, you may Gather 1 {beast} .
+                    </level>
+                </quick-innate-power>
+            </innate-powers>
+        </right>
+    </board>
+</body>
+
+</html>
