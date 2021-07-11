@@ -78,8 +78,19 @@ lore-description{
     line-height: 29px;
 }
 
-.grinning lore-description {
+.grinning lore-description,
+.lure lore-description {
     width: 810px;
+}
+
+.lure lore-description {
+    line-height: 27px;
+}
+
+.volcano lore-description {
+    left: 900px;
+    top: 130px;
+    width: 770px;
 }
 
 second-section-container{
@@ -317,15 +328,6 @@ icon.presence {
     margin-bottom: -7px;
 }
 
-icon.beast {
-  background-image: url('../images/board/beast.png');
-  height: 25px;
-  width: 35px;
-  margin-bottom: -7px;
-  margin-right: -4px;
-  margin-left: -4px;
-}
-
 icon.fear-icon {
   background-image: url('../images/board/fear.png');
   width: 35px;
@@ -360,7 +362,7 @@ icon.fast {
   margin-right: -5px;
 }
 
-icon.town, icon.city, icon.explorer,
+icon.town, icon.city, icon.explorer, icon.beast,
 icon.disease, icon.strife, icon.badlands, icon.wilds {
     width:25px;
     height:25px

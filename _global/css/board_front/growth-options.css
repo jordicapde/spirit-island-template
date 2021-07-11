@@ -9,6 +9,10 @@ growth {
   display: block;
 }
 
+.stone growth {
+    padding-bottom: 20px;
+}
+
 growth section-title {
   margin-left: 40px;
   margin-top: -12px;
@@ -22,11 +26,11 @@ growth sub-section-title {
   top: 17px;
   margin-top: 8px;
   position: absolute;
-
   display: flex;
   font-family: 'DK Snemand';
   font-size: 18pt;
   font-weight: bold;
+  font-style: italic;
 }
 
 growth sub-section-title>span {
@@ -35,17 +39,13 @@ growth sub-section-title>span {
 }
 
 growth sub-section-line {
-  height: 1px;
+  height: 5px;
   width: 100%;
   flex-shrink: 99;
-  background-color:black;
-  overflow: visible;
-
-  margin-bottom: auto;
-  margin-top: auto;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin: auto 8px;
   z-index: 1;
+  background-image: url('../../images/board/complexity_line.png');
+  background-size: cover;
 }
 
 growth-table {
@@ -62,6 +62,10 @@ growth-table {
 
 sub-section-title+growth-table{
   margin-top:60px ;
+}
+
+.lure sub-section-title+growth-table{
+    margin-top:40px ;
 }
 
 growth-border {

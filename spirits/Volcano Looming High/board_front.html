@@ -11,22 +11,22 @@
     <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
 
         <spirit-name>
-            Grinning Trickster Stirs Up Trouble
+            Volcano Looming High
         </spirit-name>
 
         <special-rules-container>
             <section-title>SPECIAL RULES</section-title>
             <special-rules-subtitle>MOUNTAIN HOME</special-rules-subtitle>
             <special-rule>
-                Your Presenceicon.png may only be added/moved into Mountain.
+                Your {presence} may only be added or moved into Mountain.
             </special-rule>
             <special-rules-subtitle>COLLAPSE IN A BLAST OF LAVA AND STEAM</special-rules-subtitle>
             <special-rule>
-                When your Presenceicon.png is destroyed, in that land, deal 1 Damage per destroyed Presenceicon.png to both Invaders and to Dahanicon.png.
+                When your {presence} is destroyed, in that land, deal 1 Damage per destroyed {presence} to both Invaders and to {dahan}.
             </special-rule>
             <special-rules-subtitle>VOLCANIC PEAKS TOWER OVER THE LANDSCAPE</special-rules-subtitle>
             <special-rule>
-                Your Power Cards gain {range-1} if you have 3 or more Presenceicon.png in the origin land.
+                Your Power Cards gain {range-plus-1} if you have 3 or more {presence} in the origin land.
             </special-rule>
         </special-rules-container>
 
@@ -34,7 +34,7 @@
             <growth title="Growth (pick one)">
                 <growth-group values="reclaim-all;gain-power-card;gain-energy(3)"></growth-group>
                 <growth-group values="add-presence(0);add-presence(0)"></growth-group>
-                <growth-group values="gain-power-card;add-presence(4);gain-card-play;gain-energy(3)"></growth-group>
+                <growth-group values="gain-power-card;add-presence(4);gain-card-play;gain-energy(2)"></growth-group>
             </growth>
 
             <presence-tracks>
@@ -49,14 +49,18 @@
                         range="0"
                         target="any"
                         target-title="TARGET LAND"
-                        note="Destroy X (1 or more) of your Presenceicon.png in target land; Destroyedpresence.png checks how many you destroyed. This Power does Damage (separately and equally) to both Invaders and Dahanicon.png. Ranges below can't be increased.">
-                    <level threshold="2-fire,2-earth,2-air">
-                        Discard Minor Powers from the deck until you get one that targets a land. Use its text effects on target land immediately, ignoring normal Range/Targeting restrictions. All "up to" instructions must be used at max value. Treat all "OR"s as "AND"s.
-                        <br>
-                        <i>(It is not considered a card of yours/a card in play. Its effects are treated as performed by this Power, as if its text was copied here.)</i>
+                        note="Destroy X (1 or more) of your {presence} in target land; {destroyed-presence} checks how many you destroyed. This Power does Damage (separately and equally) to both Invaders and {dahan}. Ranges below can't be increased.">
+                    <level threshold="2-fire,2-earth,2-destroyed-presence">
+                        In one land within {range-1}, X Damage.
                     </level>
-                    <level threshold="2-moon,1-fire,2-air">
-                        You may Forget a Power Card to gain the just-used Power Card (to hand) and 1 Energy.
+                    <level threshold="3-fire,3-earth,4-destroyed-presence">
+                        Generate X {fear} .
+                    </level>
+                    <level threshold="4-fire,2-air,4-earth,6-destroyed-presence">
+                        In each land within {range-1}, 4 Damage. Add 1 {blight} to target land; doing so does not Destroy your &nbsp;{presence} .
+                    </level>
+                    <level threshold="5-fire,3-air,5-earth,10-destroyed-presence">
+                        In each land within {range-2}, +4 Damage. In each land adjacent to the target, add 1 {blight} if it doesn't have any.
                     </level>
                 </quick-innate-power>
                 <quick-innate-power
@@ -65,17 +69,17 @@
                         range="0"
                         target="any"
                         target-title="TARGET LAND">
-                    <level threshold="3-moon">
-                        This Power may be {slow}.
+                    <level threshold="3-earth">
+                        Add 1 of your destroyed &nbsp;{presence} .
                     </level>
-                    <level threshold="3-air">
-                        Add 1 {strife}.
+                    <level threshold="3-fire">
+                        Gain a Power Card.
                     </level>
-                    <level threshold="3-sun,or 3-fire">
-                        1 Invader and 1 {dahan} deal Damage to each other.
+                    <level threshold="4-earth,4-fire">
+                        Move up to 2 of your &nbsp;{presence} from other lands to target land.
                     </level>
-                    <level threshold="3-animal">
-                        If target land has {beast} , 2 Damage. Otherwise, you may Gather 1 {beast} .
+                    <level threshold="5-fire">
+                        Return up to 2 of your destroyed &nbsp;{presence} to your &nbsp;{presence} tracks.
                     </level>
                 </quick-innate-power>
             </innate-powers>

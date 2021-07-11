@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../../_global/js/board_front.js"></script>
 </head>
 
-<body>
+<body class="lure">
     <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
 
         <spirit-name>
@@ -18,11 +18,11 @@
             <section-title>SPECIAL RULES</section-title>
             <special-rules-subtitle>Home of the Island's Heart</special-rules-subtitle>
             <special-rule>
-                Your {presence} may only be added/moved to lands that are Inland.
+                Your {presence} may only be added or moved to lands that are Inland.
             </special-rule>
             <special-rules-subtitle>Enthrall the Foreign Explorers</special-rules-subtitle>
             <special-rule>
-                For each of your {presence} in a land, ignore up to 2 {explorer} during the Ravage Step and any Ravage Actions.
+                For each of your {presence} in a land, ignore up to 2 &nbsp;{explorer} during the Ravage Step and any Ravage Actions.
             </special-rule>
         </special-rules-container>
 
@@ -33,7 +33,7 @@
                     <growth-group values="add-presence(4)"></growth-group>
                 </sub-growth>
                 <sub-growth title="and one of:">
-                    <growth-group values="gain-element(fire);gain-energy(2)"></growth-group>
+                    <growth-group values="gain-element(moon);gain-energy(2)"></growth-group>
                     <growth-group values="gain-power-card"></growth-group>
                 </sub-growth>
             </growth>
@@ -50,15 +50,15 @@
                         range="1"
                         target="invaders"
                         target-title="TARGET LAND"
-                        note="After this Power replaces pieces with {explorer}: Gather any number of those {explorer} into your lands. If target land has any {town}/{city} remaining, 1 {fear}.">
+                        note="After this Power Replaces pieces with &nbsp;{explorer} : Gather any number of those &nbsp;{explorer} into your lands. If target land has any {town} / {city} remaining, 1 {fear} .">
                     <level threshold="2-moon">
-                        Replace 1 {explorer} with one {explorer}.
+                        Replace 1 &nbsp;{explorer} with one &nbsp;{explorer} .
                     </level>
                     <level threshold="2-moon,1-air">
-                        Instead, replace 1 {town} with 2 {explorer}.
+                        Instead, Replace 1 {town} with 2 &nbsp;{explorer} .
                     </level>
                     <level threshold="3-moon,2-air,1-animal">
-                        Instead, replace 1 {city} with 3 {explorer}.
+                        Instead, Replace 1 {city} with 3 &nbsp;{explorer} .
                     </level>
                     <level threshold="4-air">
                         Repeat this Power.
@@ -70,12 +70,14 @@
                         range="0"
                         target="inland"
                         target-title="TARGET LAND"
-                        note="If this Power destroys any {explorer}, 1 {fear}. If this Power destroys 5 or more {explorer}, +1 {fear}.">
+                        note="If this Power destroys any &nbsp;{explorer} , 1 {fear} .
+                        <br>
+                        If this Power destroys 5 or more &nbsp;{explorer} , +1 {fear} .">
                     <level threshold="1-fire,3-plant">
-                        Add 1 {badlands}.
+                        Add 1 {badlands} .
                     </level>
                     <level threshold="2-plant">
-                        Destroy up to 2 {explorer} per {badlands} / {beast} / {disease} / {wilds}.
+                        Destroy up to 2 &nbsp;{explorer} per {badlands} / {beast} / {disease} / {wilds} .
                     </level>
                     <level threshold="4-plant,1-animal">
                         2 Damage.

@@ -54,12 +54,13 @@ special-rule icon.town, special-rule icon.city, special-rule icon.blight,
 special-rule icon.dahan, special-rule icon.presence, special-rule icon.wilds,
 special-rule icon.beast, special-rule icon.disease, special-rule icon.strife,
 special-rule icon.explorer, special-rule icon.badlands, special-rule icon.fear,
-special-rule icon.range-plus-1{
+special-rule icon.minor-power {
     width:30px;
     height:30px;
     margin-top: 0px;
 }
 
+special-rule icon.range-plus-1,
 special-rule icon.range-1 {
     width: 50px;
     height: 30px;

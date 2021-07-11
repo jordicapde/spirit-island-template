@@ -259,25 +259,29 @@ function parseGrowthTags(){
 
                         const elementOptions = matches[1].split(",");
 
-                    //Check if they want 2 elements
+                        //Check if they want 2 elements
                         if (elementOptions.length > 1) {
                             if (isNaN(elementOptions[1])) {
-                            //They want different elements
-                            newGrowthCellHTML += `${openTag}<gain>`
-                            for (var i = 0; i < elementOptions.length; i++) {
-                                newGrowthCellHTML += "{" + elementOptions[i] + "}";
-                                if (i < elementOptions.length - 1) {
-                                    newGrowthCellHTML += "/";
+                                //They want different elements
+                                newGrowthCellHTML += `${openTag}<gain>`
+                                for (var i = 0; i < elementOptions.length; i++) {
+                                    newGrowthCellHTML += "{" + elementOptions[i] + "}";
+                                    if (i < elementOptions.length - 1) {
+                                        newGrowthCellHTML += "/";
+                                    }
                                 }
+                                newGrowthCellHTML += "</gain><growth-text>Gain " + gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1) + "</growth-text></growth-cell>";
+                            } else {
+                                //They just want 2 of the same element
+                                newGrowthCellHTML += `${openTag}<gain>`
+                                newGrowthCellHTML += "{" + elementOptions[0] + "}";
+
+                                newGrowthCellHTML += "</gain><growth-text>Gain " + elementOptions[1] + " " + elementOptions[0].charAt(0).toUpperCase() + elementOptions[0].slice(1) + "</growth-text></growth-cell>";
                             }
-                            newGrowthCellHTML += "</gain><growth-text>Gain " + gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1) + "</growth-text></growth-cell>";
-                        } else {
-                            //They just want 2 of the same element
-                        }
                         //newGrowthCellHTML += `${openTag}<gain>{"+elementOptions[0]+"}</gain><growth-text>Gain "+gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1)+"</growth-text></growth-cell>`
-                    } else {
-                        newGrowthCellHTML += `${openTag}<gain>{` + gainedElement + "}</gain><growth-text>Gain " + gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1) + "</growth-text></growth-cell>"
-                    }
+                        } else {
+                            newGrowthCellHTML += `${openTag}<gain>{` + gainedElement + "}</gain><growth-text>Gain " + gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1) + "</growth-text></growth-cell>"
+                        }
 
 
                         break;
@@ -428,6 +432,10 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
 					inner = "{energy-gain-card}";
                     subText = "Pay";
 					break;
+                case 'gain-card-play':
+                    inner = "{gain-card-play}";
+                    subText = "+1 Card Play/Turn";
+                    break;
                 default:
                     // element
 					var elementName = splitOptions[0];

@@ -158,6 +158,14 @@ icon.presence {
   margin-right: -2px;
 }
 
+icon.destroyed-presence {
+    width: 35px;
+    height: 35px;
+    margin-bottom: -13px;
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
 icon.explorer {
   background-image: url('../../images/board/explorer.png');
   width: 20px;
@@ -227,6 +235,7 @@ icon.range-1 { background-image: url('../../images/board/presence_range_1.png');
 icon.range-2 { background-image: url('../../images/board/presence_range_2.png'); }
 icon.range-3 { background-image: url('../../images/board/presence_range_3.png'); }
 icon.range-4 { background-image: url('../../images/board/presence_range_4.png'); }
+icon.range-plus-1 { background-image: url('../../images/board/range_plus_1.png'); }
 
 icon.player-spirit{
   background-image: url('../../images/board/player-spirit.png');
@@ -397,4 +406,10 @@ icon.empty {
   display: block;
   height: 90px;
   width:90px;
+}
+
+icon.minor-power {
+  background-image: url('../../images/board/NewIcons/Misc Minor.png');
+  height: 30px;
+  width: 30px;
 }

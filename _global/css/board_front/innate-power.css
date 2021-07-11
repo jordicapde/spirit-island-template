@@ -165,6 +165,13 @@ note {
   font-size: 15pt;
 }
 
+note icon.city,
+note icon.town,
+note icon.explorer,
+note icon.fear {
+    margin-top: 1px;
+}
+
 level {
   display: inline-block;
   height: auto;

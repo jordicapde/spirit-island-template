@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="../../_global/css/global.css" rel="stylesheet" />
+    <link href="../../_global/css/board_front.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../_global/js/general.js"></script>
+    <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+</head>
+
+<body class="stone">
+	<board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
+    
+    <spirit-name>
+		Stone's Unyielding Defiance
+    </spirit-name>
+
+    <special-rules-container>
+      <section-title>SPECIAL RULES</section-title>
+      <special-rules-subtitle>BESTOW THE ENDURANCE OF BEDROCK</special-rules-subtitle>
+      <special-rule>
+		  When {blight} is added to one of your lands, unless the {blight} then outnumbers your &nbsp;{presence} , it does not cascade or destroy &nbsp;{presence} (yours or others').
+	  </special-rule>
+      <special-rules-subtitle>DEEP LAYERS EXPOSED TO THE SURFACE</special-rules-subtitle>
+      <special-rule>
+		  The first time you uncover each of your "+1 Card Play" &nbsp;{presence} spaces, gain a Minor Power. <i>(They're marked with {minor-power} as a reminder.)</i>
+      </special-rule>
+    </special-rules-container>
+
+    <right>
+		<growth title="Growth (pick one)">
+			<growth-group values="reclaim-all;gain-element(earth,2);add-presence(3,mountain)"></growth-group>
+			<growth-group values="add-presence(2);gain-energy(3)"></growth-group>
+			<growth-group values="gain-power-card;add-presence(1)"></growth-group>
+		</growth>
+
+		<presence-tracks>
+		  <energy-track values="2,3,gain-card-play,4,gain-card-play,6,gain-card-play"></energy-track>
+		  <card-play-track values="1,earth,earth,earth+reclaim-one,earth+any,2+earth"></card-play-track>
+		</presence-tracks>
+
+		<innate-powers>
+		  <quick-innate-power
+			name="HOLD THE ISLAND FAST WITH A BULWARK OF WILL"
+			speed="fast"
+			range="none"
+			target="yourself"
+			target-title="TARGET">
+			<level threshold="2-earth">
+				When {blight} is added to one of your lands, you may pay 2 Energy per {blight} to take it from the box instead of the Blight Card. <i>(Handle any cascade separately.)</i>
+			</level>
+			<level threshold="4-earth">
+				The cost is 1 Energy instead of 2.
+			</level>
+			<level threshold="6-earth,1-plant">
+				When an Event or Blight card directly destroys &nbsp;{presence} (yours or others'), you may prevent any number of &nbsp;{presence} from being destroyed by paying 1 Energy each. <i>("Directly" means "not by adding {blight}".)</i>
+			</level>
+		  </quick-innate-power>
+		  <quick-innate-power
+		  name="LET THEM BREAK THEMSELVES AGAINST THE STONE"
+		  speed="fast"
+		  range="0"
+		  target="any"
+		  target-title="TARGET LAND"
+		  note="(Reminder: Defend reduces the amount of Damage that Invaders deal to a land.)">
+			<level threshold="3-earth">
+				After Invaders deal 1 or more Damage to target land, 2 Damage.
+			</level>
+			<level threshold="5-earth">
+				Also deal half of the Damage Invaders did to the land (rounding down).
+			</level>
+			<level threshold="7-earth,2-sun">
+				Repeat this Power.
+			</level>
+		  </quick-innate-power>
+		</innate-powers>
+	</right>
+  </board>
+</body>
+
+</html>

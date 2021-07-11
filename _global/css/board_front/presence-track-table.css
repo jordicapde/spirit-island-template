@@ -19,6 +19,15 @@ presence-tracks {
   opacity: 0.9;
 }
 
+.lure presence-tracks {
+    padding-bottom: 10px;
+}
+
+.stone presence-tracks {
+    padding-bottom: 45px;
+    background-size: auto;
+}
+
 presence-tracks table {	
   display: inline-block;
   height: 340px;
@@ -37,6 +46,10 @@ presence-tracks table td[rowspan="2"] {
 presence-node {
   display: inline-table;
   max-width: 130px;
+}
+
+.lure presence-node {
+    max-width: 140px;
 }
 
 subtext {
