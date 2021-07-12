@@ -53,7 +53,7 @@ icon.no::before {
 icon.range{background-image: url('../images/50px-Rangeicon.png');}
 icon.spirit{background-image: url('../images/50px-Spiriticon.png'); }
 
-icon.badlands{background-image: url('../images/25px-Badlandsicon.png'); }
+icon.badlands{background-image: url('../images/board/25px-Badlandsicon.png'); }
 icon.beast{background-image: url('../images/board/beast.png'); }
 icon.disease{background-image: url('../images/board/75px_disease.png'); }
 icon.strife{background-image: url('../images/board/75px_strife.png'); }
