@@ -293,10 +293,7 @@ growth icon.presence {
   margin-left: 6px;
 }
 
-
-
 .description icon.beast {
-  background-image: url('../../images/board/beast.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -306,8 +303,6 @@ growth icon.presence {
   margin-bottom: -4px;
   margin-top: 0px;
 }
-
-
 
 gain-per {
   background-image: url('../../images/board/AddEnergyBlank.png');
@@ -350,36 +345,6 @@ your-land {
   margin-top: 35px;
   margin-left: 12px;
   margin-bottom: -8px;
-}
-
-move {
-  display: inline-block;
-  height: 75px;
-  width: 75px;
-  margin-left: 13px;
-  text-align: center;
-}
-
-push {
-  background-image: url('../../images/board/half_arrow_push.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  height: 70px;
-  height: 17px;
-  margin-left: 45px;
-  margin-top: -34px;
-}
-
-gather {
-  background-image: url('../../images/board/half_arrow_gather.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  height: 70px;
-  height: 17px;
-  margin-left: 45px;
-  margin-top: -34px;
 }
 
 growth-cell gain icon.fire,

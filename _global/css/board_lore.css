@@ -1,8 +1,3 @@
-@font-face {
-    font-family: JosefinSans-Regular;
-    src: url(../fonts/josefin-sans/JosefinSans-Regular.ttf);
-}
-
 html, body {
     padding: 0px;
     margin: 0px;
@@ -239,7 +234,6 @@ tr.power-bar td div{
 }
 
 icon.fire {
-    background-image: url('../images/board/Fire.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -247,7 +241,6 @@ icon.fire {
 }
 
 icon.water {
-    background-image: url('../images/board/Water.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -256,7 +249,6 @@ icon.water {
 
 
 icon.plant {
-    background-image: url('../images/board/Plant.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -265,7 +257,6 @@ icon.plant {
 
 
 icon.earth {
-    background-image: url('../images/board/Earth.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -274,7 +265,6 @@ icon.earth {
 
 
 icon.air {
-    background-image: url('../images/board/Air.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -283,7 +273,6 @@ icon.air {
 
 
 icon.moon {
-    background-image: url('../images/board/Moon.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -292,7 +281,6 @@ icon.moon {
 
 
 icon.sun {
-    background-image: url('../images/board/Sun.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -301,7 +289,6 @@ icon.sun {
 
 
 icon.animal {
-    background-image: url('../images/board/Animal.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -310,7 +297,6 @@ icon.animal {
 
 
 icon.any {
-    background-image: url('../images/board/Any.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -318,7 +304,6 @@ icon.any {
 }
 
 icon.presence {
-    background-image: url('../images/board/75px_presence.png');
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
@@ -338,7 +323,6 @@ icon.fear-icon {
 }
 
 icon.dahan {
-    background-image: url('../images/board/dahan.png');
     width: 30px;
     height: 30px;
     margin-bottom: -8px;
@@ -347,14 +331,12 @@ icon.dahan {
 }
 
 icon.blight {
-    background-image: url('../images/board/75px_blight.png');
     width: 35px;
     height: 35px;
     margin-bottom: -7px;
 }
 
 icon.fast {
-  background-image: url('../images/50px-Fasticon.png');
   width: 35px;
   height: 35px;
   margin-bottom: -8px;

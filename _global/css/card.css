@@ -1,8 +1,3 @@
-@font-face{
-  font-family: JosefinSans-Regular;
-  src: url(../fonts/josefin-sans/JosefinSans-Regular.ttf);
-}
-
 html, body{
   padding:0px;
   margin:0px;
@@ -393,7 +388,7 @@ icon.water,
 icon.earth,
 icon.plant,
 icon.animal,
-icon.any-element{
+icon.any{
   width:40px;
   height:40px;
   margin-bottom:-13px;

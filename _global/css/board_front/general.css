@@ -96,11 +96,6 @@ range {
   margin-top: 0px;
 }
 
-range-plus-1 { background-image: url('../../images/board/range_plus_1.png'); }
-range-plus-2 { background-image: url('../../images/board/range_plus_2.png'); }
-range-plus-3 { background-image: url('../../images/board/range_plus_3.png'); }
-range-plus-4 { background-image: url('../../images/board/range_plus_4.png'); }
-
 range-plus-1, range-plus-2, range-plus-3, range-plus-4 {
   background-repeat: no-repeat;
   background-size: contain;
