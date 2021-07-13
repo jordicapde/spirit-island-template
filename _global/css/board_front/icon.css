@@ -179,53 +179,25 @@ icon.ocean {
     margin-left: 34px;
 }
 
-icon.ignore-range {
+icon.ignore-range,
+icon.reclaim-one,
+icon.reclaim-all,
+icon.gain-card-play,
+icon.gain-power-card,
+icon.forget-power-card,
+icon.make-fast,
+icon.empty {
     background-image: url('../../images/board/ignore_range.png');
     display: block;
     height: 90px;
-    width:90px;
+    width: 90px;
 }
 
-icon.reclaim-one {
-  background-image: url('../../images/board/Reclaimone.png');
-  display: block;
-  height: 90px;
-  width:90px;
-}
-
-icon.gain-card-play {
-  background-image: url('../../images/board/Cardplay_Plus_1.png');
-  display: block;
-  height: 90px;
-  width:90px;
-}
-
-icon.gain-power-card {
-  background-image: url('../../images/board/Gaincardicon.png');
-  display: block;
-  height: 90px;
-  width:90px;
-}
-
-icon.forget-power-card {
-  background-image: url('../../images/customIcons/forgetCardIcon.png');
-  display: block;
-  height: 90px;
-  width:90px;
-}
-
-icon.land-gather {
-  background-image: url('../../images/board/NewIcons/Land Gather.png');
-  display: block;
-  height: 100px;
-  width:100px;
-}
-
+icon.land-gather,
 icon.push {
-  background-image: url('../../images/board/NewIcons/Land Push.png');
   display: block;
   height: 100px;
-  width:100px;
+  width: 100px;
 }
 
 icon.push > icon {
@@ -239,25 +211,15 @@ icon.push > icon {
   padding: 0px;
 }
 
-icon.reclaim-all {
-  background-image: url('../../images/board/Reclaimall.png');
-  display: block;
-  height: 90px;
-  width:90px;
-}
-
-icon.make-fast {
-  background-image: url('../../images/board/fast_power.png');
-  display: block;
-  height: 90px;
-  width:90px;
-}
-
-icon.empty {
-  display: block;
-  height: 90px;
-  width:90px;
-}
+icon.ignore-range { background-image: url('../../images/board/ignore_range.png'); }
+icon.reclaim-one { background-image: url('../../images/board/Reclaimone.png'); }
+icon.reclaim-all { background-image: url('../../images/board/Reclaimall.png'); }
+icon.gain-card-play { background-image: url('../../images/board/Cardplay_Plus_1.png'); }
+icon.gain-power-card { background-image: url('../../images/board/Gaincardicon.png'); }
+icon.forget-power-card { background-image: url('../../images/customIcons/forgetCardIcon.png'); }
+icon.make-fast { background-image: url('../../images/board/fast_power.png'); }
+icon.land-gather { background-image: url('../../images/board/NewIcons/Land Gather.png'); }
+icon.push { background-image: url('../../images/board/NewIcons/Land Push.png'); }
 
 icon.minor-power {
   background-image: url('../../images/board/NewIcons/Misc Minor.png');

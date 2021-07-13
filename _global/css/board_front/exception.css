@@ -49,3 +49,54 @@ description-container icon.city {
     margin-left: 5px;
     margin-right: 5px;
 }
+
+
+/*******************************************************************************
+********************************************************************************
+******************            SPECIFIC SPIRIT STYLES          ******************
+********************************************************************************
+********************************************************************************/
+.lure lore-description,
+.grinning lore-description {
+    width: 810px;
+}
+
+.lure lore-description {
+    line-height: 27px;
+}
+
+.lure presence-tracks {
+    padding-bottom: 10px;
+}
+
+.lure presence-node {
+    max-width: 140px;
+}
+
+.lure sub-section-title+growth-table{
+    margin-top:40px ;
+}
+
+.shroud special-rules-container {
+    width: 650px;
+}
+
+.shroud right {
+  left: 645px;
+  width: 1105px;
+}
+
+.stone growth {
+    padding-bottom: 20px;
+}
+
+.stone presence-tracks {
+    padding-bottom: 45px;
+    background-size: auto;
+}
+
+.volcano lore-description {
+    left: 900px;
+    top: 130px;
+    width: 770px;
+}

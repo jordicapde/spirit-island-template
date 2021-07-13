@@ -9,10 +9,6 @@ growth {
   display: block;
 }
 
-.stone growth {
-    padding-bottom: 20px;
-}
-
 growth section-title {
   margin-left: 40px;
   margin-top: -12px;
@@ -64,10 +60,6 @@ sub-section-title+growth-table{
   margin-top:60px ;
 }
 
-.lure sub-section-title+growth-table{
-    margin-top:40px ;
-}
-
 growth-border {
   background-image: url('../../images/board/Growthborder.png');
   background-size: contain;
@@ -92,10 +84,6 @@ growth-cell {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-growth-cell icon.discard-cards {
-  margin-bottom: 7px;
 }
 
 growth-energy {
@@ -177,11 +165,14 @@ presence-req {
   display: block;
 }
 
-growth-cell icon.make-fast {
-  margin-bottom: 7px;
-}
-
-growth-cell icon.reclaim-all {
+growth-cell icon.discard-cards,
+growth-cell icon.make-fast,
+growth-cell icon.reclaim-all,
+growth-cell icon.reclaim-one,
+growth-cell icon.ignore-range,
+growth-cell icon.gain-power-card,
+growth-cell icon.gain-card-play,
+growth-cell icon.forget-power-card {
   margin-bottom: 7px;
 }
 
@@ -195,32 +186,13 @@ growth-text {
   box-sizing: border-box;
 }
 
-growth-cell icon.gain-power-card {
-  margin-bottom: 7px;
-}
-
-growth-cell icon.forget-power-card {
-  margin-bottom: 7px;
-}
-
-growth-cell icon.gain-card-play {
-  margin-bottom: 7px;
+growth-cell icon.ignore-range {
+  margin-left: 20px;
 }
 
 growth-cell icon.push>icon {
   left: 0px;
   top: 35px;
-}
-
-
-
-growth-cell icon.reclaim-one {
-  margin-bottom: 7px;
-}
-
-growth-cell icon.ignore-range {
-  margin-left: 20px;
-  margin-bottom: 7px;
 }
 
 growth-cost {

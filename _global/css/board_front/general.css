@@ -69,7 +69,6 @@ spirit-name {
   z-index: 1;
   background-repeat: no-repeat;
   background-position: left center;
-  /* background-color: teal; */
 }
 
 .spirit-image {
@@ -126,9 +125,4 @@ right{
   top: 18px;
   width: 1090px;
   overflow: hidden;
-}
-
-.shroud right {
-  left: 645px;
-  width: 1105px;
 }

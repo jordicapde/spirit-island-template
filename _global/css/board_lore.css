@@ -73,21 +73,6 @@ lore-description{
     line-height: 29px;
 }
 
-.grinning lore-description,
-.lure lore-description {
-    width: 810px;
-}
-
-.lure lore-description {
-    line-height: 27px;
-}
-
-.volcano lore-description {
-    left: 900px;
-    top: 130px;
-    width: 770px;
-}
-
 second-section-container{
     position: absolute;
     left: 900px;
@@ -206,108 +191,16 @@ tr.power-bar td div{
 .defense, .utility{
     width: 60px;
     margin-left: 30px;
-}
-
-.offense{
-    background-image: url('../images/board/offense_bar.png');
     background-size: cover;
 }
 
-.control{
-    background-image: url('../images/board/control_bar.png');
-    background-size: cover;
-}
-
-.fear{
-    background-image: url('../images/board/fear_bar.png');
-    background-size: cover;
-}
-
-.defense {
-    background-image: url('../images/board/defense_bar.png');
-    background-size: cover;
-}
-
-.utility{
-    background-image: url('../images/board/utility_bar.png');
-    background-size: cover;
-}
-
-icon.fire {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-icon.water {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-icon.plant {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-icon.earth {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-icon.air {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-icon.moon {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-icon.sun {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-icon.animal {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-
-icon.any {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
+.offense { background-image: url('../images/board/offense_bar.png'); }
+.control { background-image: url('../images/board/control_bar.png'); }
+.fear { background-image: url('../images/board/fear_bar.png'); }
+.defense { background-image: url('../images/board/defense_bar.png'); }
+.utility { background-image: url('../images/board/utility_bar.png'); }
 
 icon.presence {
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     height: 30px;
     width: 38px;
     margin-bottom: -7px;
