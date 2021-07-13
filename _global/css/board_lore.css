@@ -84,7 +84,7 @@ setup{
 
 }
 
-play-style-title, complexity-title, complexity-value, div.summary-of-powers-title{
+play-style-title, complexity-title, complexity-value, div.summary-of-powers-title, uses-tokens td {
     font-family: 'DK Snemand';
     text-transform: uppercase;
     font-size: 36px;
@@ -157,6 +157,7 @@ complexity-title{
 summary-of-powers{
     bottom: -180px;
     position: absolute;
+    display: inline-flex;
 }
 
 div.summary-of-powers-title{
@@ -167,10 +168,6 @@ div.summary-of-powers-title{
     padding-right:10px;
 }
 
-.powers-summary{
-
-}
-
 .powers-summary tbody tr td {
     width:120px;
     font-family: 'DK Snemand';
@@ -179,18 +176,41 @@ div.summary-of-powers-title{
     text-align:center;
 }
 
-tr.power-bar td{
-    height:40px;
+uses-tokens tbody {
+    min-width: 100px;
+    height: 160px;
 }
 
-tr.power-bar td div{
+uses-tokens td {
+    font-size: 30px;
+    text-align: center;
+}
+
+uses-tokens icon.badlands,
+uses-tokens icon.disease,
+uses-tokens icon.strife,
+uses-tokens icon.beast,
+uses-tokens icon.wilds {
+    width: 40px;
     height: 40px;
+    margin: 5px;
+}
+
+uses-tokens-border {
+  background-image: url('../images/board/Growthborder.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 7px;
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: 0.9;
 }
 
 .offense, .control, .fear, 
 .defense, .utility{
     width: 60px;
-    margin-left: 30px;
+    margin: auto;
     background-size: cover;
 }
 
