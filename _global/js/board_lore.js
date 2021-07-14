@@ -55,7 +55,7 @@ function addUsesTokens() {
             else
                 usesHTML += "<td>";
 
-            usesHTML += `${replaceIcon('{' + tokenValues[i] + '}')}</td>`
+            usesHTML += `${replaceIcon(tokenValues[i])}</td>`
         }
         usesHTML += "</tr></table>";
 
