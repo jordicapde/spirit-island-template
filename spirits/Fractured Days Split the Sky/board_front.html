@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="../../_global/css/global.css" rel="stylesheet" />
+    <link href="../../_global/css/board_front.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../_global/js/general.js"></script>
+    <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+</head>
+
+<body>
+    <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
+
+        <spirit-name>
+            Fractured Days Split the Sky
+        </spirit-name>
+
+        <special-rules-container>
+            <section-title>SPECIAL RULES</section-title>
+            <special-rules-subtitle>FRAGMENTS OF SHATTERED TIME</special-rules-subtitle>
+            <special-rule>
+                Each &nbsp;{presence} on this ability represents 1 Time. Many of your Powers require Time as an additional cost. Spend it when you <b>Resolve</b> the Power. (Not when you play it.)
+                <br>
+                When you <b>Gain 1 Time</b>, put 1 of your &nbsp;{presence} here from your &nbsp;{presence} track (or, optionally, the island). When you <b>Spend 1 Time</b>, return it to a &nbsp;{presence} track - or if you have no free spaces, Destroy it.
+            </special-rule>
+            <special-rules-subtitle>DAYS THAT NEVER WERE</special-rules-subtitle>
+            <special-rule>
+                Your 3rd Growth option lets you gain any one Power Card from a special set you create during Setup. When you gain a Power Card any other way, you may add one unchosen card to this set.
+            </special-rule>
+        </special-rules-container>
+
+        <right>
+            <growth title="Growth (pick one)">
+                <growth-group values="gain-element(air);reclaim-all;gain-time(2)"></growth-group>
+                <growth-group values="gain-element(moon);gain-power-card;add-presence(2);gain-time(1)"></growth-group>
+                <growth-group values="gain-element(sun);move-presence(4);gain-card-days"></growth-group>
+            </growth>
+
+            <presence-tracks>
+                <energy-track values="1,1,2,2,2,3"></energy-track>
+                <card-play-track values="1,1,1,2,2,3"></card-play-track>
+            </presence-tracks>
+
+            <innate-powers>
+                <quick-innate-power
+                        name="Slip the Flow of Time"
+                        speed="fast"
+                        range="none"
+                        target="any {spirit}"
+                        target-title="TARGET"
+                        note="You may use this Power any number of times.<br><b>Cost to Use:</b> 1 Time per previous use this turn.">
+                    <level threshold="3-moon,1-air">
+                        Target Spirit may Resolve 1 {slow} Power now.
+                    </level>
+                    <level threshold="2-sun,2-moon">
+                        Target Spirit may Reclaim 1 Power Card from their discarded or played cards. <i>(If they Reclaim a card from play, they lose its Elements.)</i>
+                    </level>
+                    <level threshold="3-sun,2-air">
+                        Target Spirit may play a Power Card by paying its cost.
+                    </level>
+                </quick-innate-power>
+                <quick-innate-power
+                        name="Visions of a Shifting Future"
+                        speed="slow"
+                        range="any"
+                        target="yourself"
+                        target-title="TARGET">
+                    <level threshold="1-sun,2-moon,2-air">
+                        Look at the top card of <b>either</b> the Invader Deck or (if relevant) the Event Deck. Return it, then shuffle that deck's top 2 cards. <i>(For the Invader Deck, differing Invader Stages may give away which card is next.)</i>
+                    </level>
+                    <level threshold="2-sun,3-moon,2-air">
+                        Instead of returning-and-shuffling, you may put the card you looked at on the bottom of its deck. You may not do this for cards specially placed during Setup.
+                    </level>
+                </quick-innate-power>
+            </innate-powers>
+        </right>
+    </board>
+</body>
+
+</html>

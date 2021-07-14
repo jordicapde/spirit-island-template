@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="../../_global/css/global.css" rel="stylesheet" />
+    <link href="../../_global/css/board_lore.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../_global/js/general.js"></script>
+    <script type="text/javascript" src="../../_global/js/board_lore.js"></script>
+</head>
+
+<body>
+
+    <board>
+        <img class="spirit-image" src="spirit_lore.jpg" />
+        <spirit-name>
+            Vengeance as a Burning Plague
+        </spirit-name>
+        <lore-description>
+            A Spirit of vengeance, anger, and retribution. In its incarnation as a Burning Plague, it slumbers in a simmering volcanic pool, awakening at unpredictable intervals.... or when roused through supplication by one wronged. Most Dahan consider this foolhardy, for it vents its wrath on entire communities, and its pestilence may spread anywhere. Clans with a close relationship to Hearth-Vigil have less to fear, but still deem it wise - and humane - not to push their luck.
+            <br>
+            <br>
+            It is unclear whether its recent waking is due directly to the ravaging of the Invaders or to some Spirit's pleas.
+        </lore-description>
+        <second-section-container>
+            <setup>
+                <setup-title>SETUP:</setup-title>
+                <setup-description>
+                    1 of your &nbsp;{presence} starts the game already Destroyed. Put 2 &nbsp;{presence} on your starting board: 1 in a land with {blight} , 1 in a Wetland without {dahan}.
+                </setup-description>
+            </setup>
+            <play-style>
+                <play-style-title>Play Style:</play-style-title>
+                <play-style-description>
+                    Starts slow, facing an early choice whether to stop Builds (with {disease}) or let them happen (to generate {fear-icon} and keep {disease} on the island). Grows to be very effective at tearing into heavily-populated lands with lots of {blight} and/or {disease}, but setting those up may require some care... and make other Spirits unease, with how much {blight} is piling up.
+                </play-style-description>
+            </play-style>
+
+            <complexity>
+                <complexity-title>COMPLEXITY</complexity-title>
+                <!--The value property will be used to create the red box-->
+                <complexity-value value="6">High</complexity-value>
+                <red-box></red-box>
+            </complexity>
+            <!--The values on each of these properties will be used to create the colored boxes-->
+            <summary-of-powers>
+                <table class="powers-summary">
+                    <tr class="power-bar">
+                        <td valign="middle">
+                            <div class="summary-of-powers-title">Summary of Powers</div>
+                        </td>
+                        <td valign="bottom">
+                            <div class="offense" value = "9"></div>
+                        </td>
+                        <td valign="bottom">
+                            <div class="control" value = "2"></div>
+                        </td>
+                        <td valign="bottom">
+                            <div class="fear" value = "4"></div>
+                        </td>
+                        <td valign="bottom">
+                            <div class="defense" value = "2"></div>
+                        </td>
+                        <td valign="bottom">
+                            <div class="utility" value = "6"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div>OFFENSE</div>
+                        </td>
+                        <td>
+                            <div>CONTROL</div>
+                        </td>
+                        <td>
+                            <div>FEAR</div>
+                        </td>
+                        <td>
+                            <div>DEFENSE</div>
+                        </td>
+                        <td>
+                            <div>UTILITY</div>
+                        </td>
+                    </tr>
+                </table>
+            </summary-of-powers>
+        </second-section-container>
+    </board>
+
+</body>
+
+</html>

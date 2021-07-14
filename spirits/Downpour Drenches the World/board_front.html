@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="../../_global/css/global.css" rel="stylesheet" />
+    <link href="../../_global/css/board_front.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../_global/js/general.js"></script>
+    <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+</head>
+
+<body>
+    <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
+
+        <spirit-name>
+            Downpour Drenches the World
+        </spirit-name>
+
+        <special-rules-container>
+            <section-title>SPECIAL RULES</section-title>
+            <special-rules-subtitle>DRENCH THE LANDSCAPE</special-rules-subtitle>
+            <special-rule>
+                Spirit Actions and Special Rules treat your {sacred-site} as Wetlands in addition to the printed terrain.
+            </special-rule>
+            <special-rules-subtitle>POUR DOWN POWER ACROSS THE ISLAND</special-rules-subtitle>
+            <special-rule>
+                For each 2 {water} you have, during the {fast} / {slow} phase you may either:
+                <ul>
+                    <li>Gain 1 Energy; or
+                    <li>Repeat a land-targeting Power Card by paying its cost again. (It need not target the same land.)
+                </ul>
+                Use scenario markers or spare game pieces to track uses of this rule. (Max 5 times per turn, no matter how much {water} you have.)
+            </special-rule>
+        </special-rules-container>
+
+        <right>
+            <growth title="Growth (pick one)">
+                <growth-group values="reclaim-all;gain-power-card;move-presence(2)"></growth-group>
+                <growth-group values="add-presence(2);add-presence(2);gain-element(water,2);discard-cards"></growth-group>
+                <growth-group values="gain-power-card;add-presence(3);gain-energy(1)"></growth-group>
+            </growth>
+
+            <presence-tracks>
+                <energy-track values="1,water,plant,water,2+air,water,earth,water+water"></energy-track>
+                <card-play-track values="1,move-presence(1),water,2,move-presence(1),3"></card-play-track>
+            </presence-tracks>
+
+            <innate-powers>
+                <quick-innate-power
+                        name="RAIN AND MUD SUPPRESS CONFLICT"
+                        speed="fast"
+                        range="none"
+                        target="yourself"
+                        target-title="TARGET"
+                        note="You may use this Power any number of times.<br><b>Cost to Use:</b> 1 Time per previous use this turn.">
+                    <level threshold="1-air,3-water">
+                        Each of your &nbsp;{presence} grants Defend 1 and lowers {dahan} counterattack damage by 1. (Total, in its land.)
+                    </level>
+                    <level threshold="5-water,1-earth">
+                        Each of your &nbsp;{presence} grants Defend 1 and lowers {dahan} counterattack damage by 1.
+                    </level>
+                    <level threshold="3-air,9-water,2-earth">
+                        2 {fear}. In your lands, Invaders and {dahan} have -1 Health (min 1).
+                    </level>
+                </quick-innate-power>
+                <quick-innate-power
+                        name="WATER NOURISHES LIFE'S GROWTH"
+                        speed="fast"
+                        range="0"
+                        target="any"
+                        target-title="TARGET LAND">
+                    <level threshold="3-water,2-plant">
+                        Gain 1 Energy. You may remove 1 {blight} by removing one of your &nbsp;{presence} (From target land).
+                    </level>
+                    <level threshold="5-water,1-earth,2-plant">
+                        Gain +1 Energy. Gather up to 1 {dahan}.
+                    </level>
+                    <level threshold="7-water,2-earth,3-plant">
+                        When {blight} would be added to target land, instead leave it on the card.
+                    </level>
+                </quick-innate-power>
+            </innate-powers>
+        </right>
+    </board>
+</body>
+
+</html>
