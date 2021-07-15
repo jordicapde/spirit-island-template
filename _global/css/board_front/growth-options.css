@@ -319,6 +319,10 @@ your-land {
   margin-bottom: -8px;
 }
 
+growth-cell gain {
+    display: flex;
+}
+
 growth-cell gain icon.fire,
 growth-cell gain icon.any,
 growth-cell gain icon.water,
@@ -334,6 +338,44 @@ growth-cell gain icon.moon {
   height: 60px;
   width: 60px;
   margin-top: 21px;
+}
+
+growth-cell gain.element-2 icon.fire,
+growth-cell gain.element-2 icon.any,
+growth-cell gain.element-2 icon.water,
+growth-cell gain.element-2 icon.air,
+growth-cell gain.element-2 icon.earth,
+growth-cell gain.element-2 icon.animal,
+growth-cell gain.element-2 icon.plant,
+growth-cell gain.element-2 icon.sun,
+growth-cell gain.element-2 icon.moon {
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+growth-cell gain.element-3 icon.fire,
+growth-cell gain.element-3 icon.any,
+growth-cell gain.element-3 icon.water,
+growth-cell gain.element-3 icon.air,
+growth-cell gain.element-3 icon.earth,
+growth-cell gain.element-3 icon.animal,
+growth-cell gain.element-3 icon.plant,
+growth-cell gain.element-3 icon.sun,
+growth-cell gain.element-3 icon.moon {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+growth-cell gain icon-top {
+    transform: translateY(-40px) translateX(14px);
+}
+
+growth-cell gain icon-bottom {
+    transform: translateY(0px) translateX(-20px);
 }
 
 growth-cell icon.fire,

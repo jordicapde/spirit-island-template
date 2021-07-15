@@ -263,22 +263,27 @@ function parseGrowthTags(){
                         if (elementOptions.length > 1) {
                             if (isNaN(elementOptions[1])) {
                                 //They want different elements
-                                newGrowthCellHTML += `${openTag}<gain>`
+                                var gainText = "Gain ";
+                                newGrowthCellHTML += openTag + "<gain class='element-" + elementOptions.length + "'>";
+
                                 for (var i = 0; i < elementOptions.length; i++) {
                                     newGrowthCellHTML += "{" + elementOptions[i] + "}";
-                                    if (i < elementOptions.length - 1) {
-                                        newGrowthCellHTML += "/";
-                                    }
+                                    gainText += elementOptions[i].charAt(0).toUpperCase() + elementOptions[i].slice(1);
+
+                                    if (i == elementOptions.length - 2)
+                                        gainText += " or ";
+                                    else if (i < elementOptions.length - 2)
+                                        gainText += ", ";
                                 }
-                                newGrowthCellHTML += "</gain><growth-text>Gain " + gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1) + "</growth-text></growth-cell>";
+                                newGrowthCellHTML += "</gain><growth-text>" + gainText + "</growth-text></growth-cell>";
                             } else {
                                 //They just want 2 of the same element
                                 newGrowthCellHTML += `${openTag}<gain>`
-                                newGrowthCellHTML += "{" + elementOptions[0] + "}";
+                                newGrowthCellHTML += "<icon-top>{" + elementOptions[0] + "}</icon-top>";
+                                newGrowthCellHTML += "<icon-bottom>{" + elementOptions[0] + "}</icon-bottom>";
 
                                 newGrowthCellHTML += "</gain><growth-text>Gain " + elementOptions[1] + " " + elementOptions[0].charAt(0).toUpperCase() + elementOptions[0].slice(1) + "</growth-text></growth-cell>";
                             }
-                        //newGrowthCellHTML += `${openTag}<gain>{"+elementOptions[0]+"}</gain><growth-text>Gain "+gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1)+"</growth-text></growth-cell>`
                         } else {
                             newGrowthCellHTML += `${openTag}<gain>{` + gainedElement + "}</gain><growth-text>Gain " + gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1) + "</growth-text></growth-cell>"
                         }
