@@ -50,28 +50,27 @@ icon.no::before {
   margin: auto;
 }
 
-icon.range{background-image: url('../images/50px-Rangeicon.png');}
-icon.spirit{background-image: url('../images/50px-Spiriticon.png'); }
+icon.spirit{background-image: url('../images/spiriticon.png'); }
 
-icon.badlands{background-image: url('../images/board/25px-Badlandsicon.png'); }
+icon.badlands{background-image: url('../images/board/badlands.png'); }
 icon.beast{background-image: url('../images/board/beast.png'); }
-icon.disease{background-image: url('../images/board/75px_disease.png'); }
-icon.strife{background-image: url('../images/board/75px_strife.png'); }
+icon.disease{background-image: url('../images/board/disease.png'); }
+icon.strife{background-image: url('../images/board/strife.png'); }
 icon.wilds{background-image: url('../images/board/wilds.png'); }
 
-icon.fast{background-image: url('../images/50px-Fasticon.png');}
-icon.slow{background-image: url('../images/50px-Slowicon.png');}
-icon.blight{background-image: url('../images/board/75px_blight.png');}
+icon.fast{background-image: url('../images/fasticon.png');}
+icon.slow{background-image: url('../images/slowicon.png');}
+icon.blight{background-image: url('../images/board/blight.png');}
 icon.dahan{background-image: url('../images/board/dahan.png');}
 icon.fear{background-image: url('../images/board/fear.png');}
 icon.escalation {background-image: url('../images/10px-Stage_II_Escalation.png'); margin-bottom:0px;}
 
 icon.explorer{background-image: url('../images/board/explorer.png'); margin-left:-4px; margin-right:-7px;}
-icon.town{background-image: url('../images/board/50px_town.png');}
-icon.city{background-image: url('../images/board/75px_city.png');}
+icon.town{background-image: url('../images/board/town.png');}
+icon.city{background-image: url('../images/board/city.png');}
 
 icon.presence-white {background-image: url('../images/25px-Presenceicon-inverse.png'); margin-left:3px; margin-right:3px;}
-icon.presence { background-image: url('../images/board/75px_presence.png'); }
+icon.presence { background-image: url('../images/board/presence.png'); }
 icon.destroyed-presence {background-image: url('../images/board/NewIcons/Destroyedpresence.png');}
 icon.sacred-site {background-image: url('../images/board/sacred_site.png'); }
 
