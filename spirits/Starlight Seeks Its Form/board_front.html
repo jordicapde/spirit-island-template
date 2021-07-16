@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="../../_global/css/global.css" rel="stylesheet" />
+    <link href="../../_global/css/board_front.css" rel="stylesheet" />
+    <script type="text/javascript" src="../../_global/js/general.js"></script>
+    <script type="text/javascript" src="../../_global/js/board_front.js"></script>
+</head>
+
+<body>
+    <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png">
+
+        <spirit-name>
+            Starlight Seeks Its Form
+        </spirit-name>
+
+        <special-rules-container>
+            <section-title>SPECIAL RULES</section-title>
+            <special-rules-subtitle>GROWTH BEGETS GROWTH</special-rules-subtitle>
+            <special-rule>
+                You have 6 {presence} tracks. <i>(As usual, you may add {presence} from any track.)</i> 4 of the {presence} tracks are next to rows of Growth choices: these choices start unavailable.
+                Upon emptying a Growth track, pick one of its two Growth choices to be immediately available. The other stays unavailable for the rest of the game <i>(cover with a spare piece)</i>.
+                <br>
+                After you add {presence} from a space marked {energy-gain-1}, gain 1 Energy.
+            </special-rule>
+            <special-rules-subtitle>SLOWLY COALESCING NATURE</special-rules-subtitle>
+            <special-rule>
+                After revealing a {element}, place 1 Element Marker of your choice on it. That element is permanent and is constantly available <i>(As if pre-printed on the {presence} track.)</i>.
+            </special-rule>
+        </special-rules-container>
+
+        <right>
+            <growth title="Growth (pick three)">
+                <growth-group values="reclaim-one"></growth-group>
+                <growth-group values="add-presence(0)"></growth-group>
+                <growth-group values="gain-energy(1)"></growth-group>
+                <growth-group values="move-presence(3)"></growth-group>
+
+
+                <!--
+                <growth-group values="reclaim-half;gain-power-card;move-presence(1)"></growth-group>
+                <growth-group values="gain-energy(3);gain-card-play;move-presence(2)"></growth-group>
+                <growth-group values="reclaim-all;gain-power-card;gain-energy(1)"></growth-group>
+                <growth-group values="empty;gain-card-play;make-fast"></growth-group>
+                -->
+            </growth>
+
+            <presence-tracks>
+                <energy-track values="1,2,element,4"></energy-track>
+                <card-play-track values="2,element,element,3"></card-play-track>
+            </presence-tracks>
+
+            <innate-powers>
+                <quick-innate-power
+                        name="Air Moves, Earth Endures"
+                        speed="fast"
+                        range="1"
+                        target="any"
+                        target-title="TARGET LAND">
+                    <level threshold="3-air">
+                        Push up to 2 {explorer} or 1 {town}.
+                    </level>
+                    <level threshold="3-earth">
+                        Defend 5.
+                    </level>
+                </quick-innate-power>
+                <quick-innate-power
+                        name="Fire Burns, Water Soothes"
+                        speed="slow"
+                        range="sacred-site,1"
+                        target="any"
+                        target-title="TARGET LAND">
+                    <level threshold="3-fire">
+                        1 {fear}. 2 Damage.
+                    </level>
+                    <level threshold="3-water">
+                        Remove 1 {blight}.
+                    </level>
+                </quick-innate-power>
+                <quick-innate-power
+                        name="Wood Seeks Growth, Humans Seek Freedom"
+                        speed="slow"
+                        range="2"
+                        target="any"
+                        target-title="TARGET LAND">
+                    <level threshold="3-plant">
+                        Choose a Spirit with {presence} in target land. They gain a Power Card.
+                    </level>
+                    <level threshold="3-animal">
+                        1 Damage per {dahan} <b>OR</b> Push up to 3 {dahan}.
+                    </level>
+                </quick-innate-power>
+                <quick-innate-power
+                        name="Sidereal Guidance"
+                        speed="slow"
+                        range="1"
+                        target="any"
+                        target-title="TARGET LAND">
+                    <level threshold="2-moon">
+                        Gather up to 1 {explorer} / {dahan}.
+                    </level>
+                    <level threshold="3-moon">
+                        Instead, Gather up to 3 {explorer}.
+                    </level>
+                </quick-innate-power>
+                <quick-innate-power
+                        name="Stars Blaze in the Daytime Sky"
+                        speed="slow"
+                        range="none"
+                        target="yourself"
+                        target-title="TARGET">
+                    <level threshold="4-sun">
+                        3 {fear}. Gain 1 Energy. Reclaim up to 1 Power Card from play or your discard pile.
+                    </level>
+                </quick-innate-power>
+            </innate-powers>
+        </right>
+    </board>
+</body>
+
+</html>
