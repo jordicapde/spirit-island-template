@@ -114,9 +114,10 @@ range {
   width: 50px;
   height: 32px;
   text-align: center;
-  background-image: url('../../images/50px-Rangeicon.png');
+  background-image: url('../../images/rangeicon.png');
   background-repeat: no-repeat;
   background-position-y: 25px;
+  background-size: contain;
 }
 
 no-range {
@@ -137,14 +138,14 @@ info-target, innate-info-target {
 }
 
 innate-power.fast innate-info-speed {
-  background-image: url('../../images/50px-Fasticon.png');
+  background-image: url('../../images/fasticon.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50px 40px;
 }
 
 innate-power.slow innate-info-speed {
-  background-image: url('../../images/50px-Slowicon.png');
+  background-image: url('../../images/slowicon.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50px 40px;
@@ -188,6 +189,16 @@ threshold {
   float: left;
 }
 
+threshold icon.sun, threshold icon.earth, threshold icon.plant, threshold icon.fire,
+threshold icon.air, threshold icon.moon, threshold icon.animal, threshold icon.water,
+threshold icon.beast, threshold icon.destroyed-presence {
+    width: 45px;
+    height: 45px;
+    margin-bottom: -9px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 innate-info-range icon.range-0, innate-info-range icon.range-1, innate-info-range icon.range-2, 
 innate-info-range icon.range-3, innate-info-range icon.range-4 {
     width: 75px;
@@ -228,9 +239,27 @@ innate-info-range icon.jungle-presence, innate-info-range icon.mountain-presence
   margin-right: 10px;
 }
 
-innate-info-target icon.blight, innate-info-target icon.no-blight {
+innate-info-target icon.blight, innate-info-target icon.no-blight,
+innate-info-target icon.spirit {
   height: 30px;
   width: 30px;
   margin-bottom: 0px;
   margin-top: 0px;
+}
+
+.description icon.range-0, .description icon.range-1, .description icon.range-2,
+.description icon.range-3, .description icon.range-4 {
+    width: 45px;
+    height: 30px;
+    margin-left: 0px;
+}
+
+.description icon.sun, .description icon.earth, .description icon.plant,
+.description icon.fire, .description icon.air, .description icon.moon,
+.description icon.animal, .description icon.water, .description icon.any {
+    width: 35px;
+    height: 35px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: -8px;
 }

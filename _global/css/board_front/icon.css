@@ -30,29 +30,6 @@ icon.none {
   display:none;
 }
 
-icon.presence {
-  height: 25px;
-  width: 35px;
-  margin-bottom:-9px;
-  margin-left:0px;
-}
-
-icon.beast {
-  height: 25px;
-  width: 35px;
-  margin-bottom: -7px;
-  margin-right: -4px;
-  margin-left: -4px;
-}
-
-icon.move-presence {
-  background-image: url('../../images/board/75px_presence.png');
-  display: block;
-  height: 18px;
-  margin-top: 4px;
-  margin-bottom: 8px;
-}
-
 icon.move-presence-1 { background-image: url('../../images/board/move_presence_1.png'); }
 icon.move-presence-2 { background-image: url('../../images/board/move_presence_2.png'); }
 icon.move-presence-3 { background-image: url('../../images/board/move_presence_3.png'); }
@@ -98,65 +75,50 @@ icon.sacred-site {
 }
 
 icon.presence,
-icon.destroyed-presence {
-  width: 35px;
-  height: 35px;
-  margin-bottom: -13px;
-  margin-left: -2px;
-  margin-right: -2px;
-}
-
-icon.explorer {
-  width: 20px;
-  height: 35px;
-  margin-bottom: -8px;
-  margin-left: -5px;
-  margin-right: -5px;
-}
-
+icon.destroyed-presence,
+icon.beast,
 icon.disease,
 icon.strife,
 icon.wilds,
-icon.badlands {
+icon.badlands,
+icon.fear,
+icon.dahan,
+icon.explorer,
+icon.town,
+icon.city,
+icon.blight,
+icon.minor-power {
   width: 30px;
   height: 30px;
   margin-bottom: -8px;
-  margin-left: -5px;
-  margin-right: 0px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
-icon.fear {
-  width: 35px;
-  height: 35px;
-  margin-bottom: -8px;
-  margin-left: -5px;
-  margin-right: -5px;
-}
-
-icon.player-spirit{
-  background-image: url('../../images/board/player-spirit.png');
-  width: 30px;
-  height: 30px;
-}
-
-icon.blight {
-  margin-bottom: -7px;
-  margin-top: 10px;
+icon.presence,
+icon.destroyed-presence {
+    width: 35px;
+    height: 35px;
+    margin-bottom: -10px;
 }
 
 icon.dahan {
-    height: 30px;
-    height: 30px;
-    margin-bottom: -8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: 0px;
+    margin-right: 2px;
 }
 
-icon.town,
-icon.city {
-  margin-bottom: -7px;
-  margin-top: 10px;
+icon.explorer {
+    margin-left: -5px;
+    margin-right: -7px;
+}
+
+icon.fear {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+icon.blight {
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 icon.sand, icon.wetland, icon.jungle, icon.mountain, 
@@ -211,6 +173,7 @@ icon.push > icon {
   padding: 0px;
 }
 
+icon.minor-power { background-image: url('../../images/board/NewIcons/Misc Minor.png'); }
 icon.ignore-range { background-image: url('../../images/board/ignore_range.png'); }
 icon.reclaim-one { background-image: url('../../images/board/Reclaimone.png'); }
 icon.reclaim-all { background-image: url('../../images/board/Reclaimall.png'); }
@@ -223,9 +186,3 @@ icon.land-gather { background-image: url('../../images/board/NewIcons/Land Gathe
 icon.push { background-image: url('../../images/board/NewIcons/Land Push.png'); }
 icon.energy-gain-1 { background-image: url('../../images/board/NewIcons/Energy Gain 1.png'); }
 icon.element { background-image: url('../../images/board/NewIcons/element-star.png'); }
-
-icon.minor-power {
-  background-image: url('../../images/board/NewIcons/Misc Minor.png');
-  height: 30px;
-  width: 30px;
-}

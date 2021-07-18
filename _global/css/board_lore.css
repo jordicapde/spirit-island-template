@@ -110,12 +110,9 @@ setup-description{
 
 setup-description icon.fire, setup-description icon.earth, setup-description icon.animal, 
 setup-description icon.water, setup-description icon.air, setup-description icon.sun, 
-setup-description icon.plant, setup-description icon.moon, setup-description icon.any{
-    width: 35px;
-    height: 35px;
-    margin-bottom: -9px;
-    margin-left: -5px;
-    margin-right: 0px;
+setup-description icon.plant, setup-description icon.moon, setup-description icon.any {
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 play-style{
@@ -222,45 +219,35 @@ uses-tokens-border {
 .defense { background-image: url('../images/board/defense_bar.png'); }
 .utility { background-image: url('../images/board/utility_bar.png'); }
 
+icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: -8px;
+    margin-left: 2px;
+    margin-right: 4px;
+}
+
 icon.presence {
     height: 30px;
     width: 38px;
-    margin-bottom: -7px;
+    margin-right: 2px;
 }
 
 icon.fear-icon {
-  background-image: url('../images/board/fear.png');
-  width: 35px;
-  height: 35px;
-  margin-bottom: -8px;
-  margin-left: -5px;
-  margin-right: -5px;
+    background-image: url('../images/board/fear.png');
+    margin-left: 1px;
+    margin-right: 1px;
 }
 
 icon.dahan {
-    width: 30px;
-    height: 30px;
-    margin-bottom: -8px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-icon.blight {
-    width: 35px;
-    height: 35px;
-    margin-bottom: -7px;
+    margin-right: 2px;
 }
 
 icon.fast {
-  width: 35px;
-  height: 35px;
-  margin-bottom: -8px;
-  margin-left: -5px;
-  margin-right: -5px;
+    margin-right: 2px;
 }
 
-icon.town, icon.city, icon.explorer, icon.beast,
-icon.disease, icon.strife, icon.badlands, icon.wilds {
-    width:25px;
-    height:25px
+icon.explorer {
+    margin-left: -2px;
+    margin-right: -5px;
 }

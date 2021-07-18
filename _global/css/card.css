@@ -50,7 +50,7 @@ card.slow{
 
 card.fast info-speed
 {
-  background-image: url('../images/50px-Fasticon.png');
+  background-image: url('../images/fasticon.png');
   background-position:center;
   background-repeat: no-repeat;
   background-size:40px 30px;
@@ -58,7 +58,7 @@ card.fast info-speed
 
 card.slow info-speed
 {
-  background-image: url('../images/50px-Slowicon.png');
+  background-image: url('../images/slowicon.png');
   background-position:center;
   background-repeat: no-repeat;
   background-size:40px 30px;
