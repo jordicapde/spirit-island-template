@@ -185,14 +185,20 @@ uses-tokens td {
     text-align: center;
 }
 
-uses-tokens icon.badlands,
-uses-tokens icon.disease,
-uses-tokens icon.strife,
-uses-tokens icon.beast,
-uses-tokens icon.wilds {
+uses-tokens icon {
     width: 40px;
     height: 40px;
     margin: 5px;
+}
+
+uses-tokens table.element-1 icon {
+    width: 60px;
+    height: 60px;
+}
+
+uses-tokens table.element-2 icon {
+    width: 50px;
+    height: 50px;
 }
 
 uses-tokens-border {

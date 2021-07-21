@@ -1,9 +1,10 @@
 window.onload = function startMain(){
+    addUsesTokens();
+
     var html = document.querySelectorAll('board')[0].innerHTML;
     document.querySelectorAll('board')[0].innerHTML = replaceIcon(html);
     adjustComplexityValue();
     createPowerProperties();
-    addUsesTokens();
 }
 
 function adjustComplexityValue() {
@@ -39,28 +40,33 @@ function createPowerProperties(){
 function addUsesTokens() {
     var usesTokensTag = document.getElementsByTagName("uses-tokens")[0];
     if (usesTokensTag) {
-        var border = document.createElement("uses-tokens-border");
-        usesTokensTag.parentNode.insertBefore(border, usesTokensTag);
+        var tokenValues = usesTokensTag.getAttribute("values");
 
-        var usesHTML = "<table><tr><td colspan='100%'>USES<td></tr><tr>";
-        var tokenValues = usesTokensTag.getAttribute("values").split(",");
+        if (tokenValues) {
+            tokenValues = tokenValues.split(",");
 
-        for (i = 0; i < tokenValues.length; i++) {
-            if (i == 2)
-                usesHTML += "</tr><tr>";
+            var border = document.createElement("uses-tokens-border");
+            usesTokensTag.parentNode.insertBefore(border, usesTokensTag);
 
-            // 3 token elements
-            if (tokenValues.length == 3 && i == 2)
-                usesHTML += "<td colspan='2'>";
-            else
-                usesHTML += "<td>";
+            var usesHTML = "<table class='element-" + tokenValues.length + "'><tr><td colspan='100%'>USES<td></tr><tr>";
 
-            usesHTML += `${replaceIcon(tokenValues[i])}</td>`
+            for (i = 0; i < tokenValues.length; i++) {
+                if (i == 2)
+                    usesHTML += "</tr><tr>";
+
+                // 3 token elements
+                if (tokenValues.length == 3 && i == 2)
+                    usesHTML += "<td colspan='2'>";
+                else
+                    usesHTML += "<td>";
+
+                usesHTML += `${replaceIcon(tokenValues[i])}</td>`
+            }
+            usesHTML += "</tr></table>";
+
+            document.getElementsByTagName("uses-tokens")[0].removeAttribute("values");
+
+            document.getElementsByTagName("uses-tokens")[0].innerHTML = usesHTML;
         }
-        usesHTML += "</tr></table>";
-
-        document.getElementsByTagName("uses-tokens")[0].removeAttribute("values");
-
-        document.getElementsByTagName("uses-tokens")[0].innerHTML = usesHTML;
     }
 }
