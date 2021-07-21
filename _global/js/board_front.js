@@ -184,7 +184,7 @@ function parseGrowthTags(){
                         newGrowthCellHTML += `${openTag}<growth-energy><value>` + gainEnergyBy + "</value></growth-energy><growth-text>Gain Energy</growth-text></growth-cell>"
                     } else {
                         //Gain Energy is not from a number
-                        newGrowthCellHTML += `${openTag}<gain-per><value>1</value></gain-per><` + gainEnergyBy + "></" + gainEnergyBy + "><growth-text>Gain 1 Energy per " + gainEnergyBy.charAt(0).toUpperCase() + gainEnergyBy.slice(1) + "</growth-text></growth-cell>"
+                        newGrowthCellHTML += `${openTag}<gain-per><value>1</value></gain-per><` + gainEnergyBy + "></" + gainEnergyBy + "><growth-text>Gain 1 Energy per " + capitalise(gainEnergyBy) + "</growth-text></growth-cell>"
                     }
                         break;
                     }
@@ -232,7 +232,7 @@ function parseGrowthTags(){
                     {
                         const matches = regExp.exec(classPieces[j]);
                         const pushTarget = matches[1];
-                        newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + pushTarget + "'></icon></icon><growth-text>Push " + pushTarget + "</growth-text></growth-cell>"
+                        newGrowthCellHTML += `${openTag}<icon class='${growthItem}'><icon class='${pushTarget}'></icon></icon><growth-text>Push ${capitalise(pushTarget)}</growth-text></growth-cell>`;
                         break;
                     }
 
@@ -272,7 +272,7 @@ function parseGrowthTags(){
 
                                 for (var i = 0; i < elementOptions.length; i++) {
                                     newGrowthCellHTML += "{" + elementOptions[i] + "}";
-                                    gainText += elementOptions[i].charAt(0).toUpperCase() + elementOptions[i].slice(1);
+                                    gainText += capitalise(elementOptions[i]);
 
                                     if (i == elementOptions.length - 2)
                                         gainText += " or ";
@@ -286,11 +286,10 @@ function parseGrowthTags(){
                                 newGrowthCellHTML += "<icon-top>{" + elementOptions[0] + "}</icon-top>";
                                 newGrowthCellHTML += "<icon-bottom>{" + elementOptions[0] + "}</icon-bottom>";
 
-                                newGrowthCellHTML += "</gain><growth-text>Gain " + elementOptions[1] + " " + elementOptions[0].charAt(0).toUpperCase() + elementOptions[0].slice(1) + "</growth-text></growth-cell>";
+                                newGrowthCellHTML += "</gain><growth-text>Gain " + elementOptions[1] + " " + capitalise(elementOptions[0]) + "</growth-text></growth-cell>";
                             }
                         } else {
-                            newGrowthCellHTML += `${openTag}<gain>{` + gainedElement + "}</gain><growth-text>Gain " + gainedElement.charAt(0).toUpperCase() + gainedElement.slice(1) + "</growth-text></growth-cell>"
-                        }
+                            newGrowthCellHTML += `${openTag}<gain>{` + gainedElement + "}</gain><growth-text>Gain " + capitalise(gainedElement) + "</growth-text></growth-cell>"                        }
 
 
                         break;
@@ -429,7 +428,7 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
 					var matches = regExp.exec(splitOptions[0]);
 					var pushTarget = matches[1];
                     inner = "<icon class='push'><icon class='"+pushTarget+"'></icon></icon>";
-                    subText = "Push "+Capitalise(pushTarget);
+                    subText = "Push " + capitalise(pushTarget);
 					break;    
 				case 'move-presence':
 					var matches = regExp.exec(splitOptions[0]);
@@ -449,7 +448,7 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
                     // element
 					var elementName = splitOptions[0];
                     inner = "<icon class='"+elementName+"'></icon>";
-                    subText = Capitalise(elementName);
+                    subText = capitalise(elementName);
 					break;                
 			}            
 		} else {
@@ -463,11 +462,11 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
                 }
             }, splitOptions);            
 
-            var subText = Capitalise(splitOptions[1]);
+            var subText = capitalise(splitOptions[1]);
             if(splitOptions[1] == 'reclaim-one'){
                 subText = "Reclaim One";
             }
-            subText = Capitalise(splitOptions[0])+", "+subText;
+            subText = capitalise(splitOptions[0])+", "+subText;
 
             var top = "";
             var bottom = "<icon class='"+splitOptions[1]+"'></icon>";
@@ -491,10 +490,6 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
     presenceNode.innerHTML += "<subtext>" + subText + "</subtext>";
 	
 	return presenceNode.outerHTML;
-}
-
-function Capitalise(str){
-    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function setNewEnergyCardPlayTracks(energyHTML, cardPlayHTML){
