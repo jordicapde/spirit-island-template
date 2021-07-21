@@ -115,3 +115,8 @@ icon.range-plus-1 { background-image: url('../images/board/range_plus_1.png'); }
 icon.range-plus-2 { background-image: url('../images/board/range_plus_2.png'); }
 icon.range-plus-3 { background-image: url('../images/board/range_plus_3.png'); }
 icon.range-plus-4 { background-image: url('../images/board/range_plus_4.png'); }
+
+icon.promo-pack { background-image: url('../images/promo_pack_icon.png'); }
+icon.branch-claw { background-image: url('../images/branch_claw_icon.png'); }
+icon.jagged-earth { background-image: url('../images/jagged_earth_icon.png'); }
+icon.fan-made { background-image: url('../images/meeple_icon.png'); }

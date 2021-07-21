@@ -8,11 +8,11 @@ window.onload = function startMain(){
 	}
     parseInnatePowers();
     const board = document.querySelectorAll('board')[0];
-    addImages(board)
+    addImages(board);
     var html = board.innerHTML;
     board.innerHTML = replaceIcon(html);
     dynamicCellWidth();
-    dynamicSpecialRuleHeight(board)
+    dynamicSpecialRuleHeight(board);
 }
 function dynamicSpecialRuleHeight(board){
     const specialRules = board.querySelectorAll('special-rules-container')[0]
@@ -37,8 +37,8 @@ function dynamicSpecialRuleHeight(board){
 function addImages(board) {
 
     const spiritImage = board.getAttribute('spirit-image');
-
     const spiritBorder = board.getAttribute('spirit-border');
+    const expansion = board.getAttribute('expansion');
 
     if(spiritBorder){
         const specialRules = board.querySelectorAll('special-rules-container')[0]
@@ -46,6 +46,10 @@ function addImages(board) {
     }
     if(spiritImage){
         board.innerHTML = `<div class="spirit-image" style="background-image: url(${spiritImage});" ></div>` + board.innerHTML
+    }
+    if (expansion) {
+        const right = document.querySelectorAll('right')[0];
+        right.innerHTML = right.innerHTML + `<div class="expansion-icon">${replaceIcon(expansion)}</div>`;
     }
 }
 

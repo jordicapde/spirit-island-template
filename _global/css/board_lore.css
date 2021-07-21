@@ -61,6 +61,17 @@ spirit-name {
     background-size: contain;
 }
 
+.expansion-icon {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+}
+
+.expansion-icon icon {
+    height: 40px;
+    width: 40px;
+}
+
 lore-description{
     position: absolute;
     left: 883px;

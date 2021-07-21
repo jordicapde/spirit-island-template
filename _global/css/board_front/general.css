@@ -80,6 +80,17 @@ spirit-name {
   background-size:contain;
 }
 
+.expansion-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.expansion-icon icon {
+    height: 40px;
+    width: 40px;
+}
+
 #single-line {
   padding-top: 13px;
 }

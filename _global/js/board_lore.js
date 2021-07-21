@@ -1,8 +1,11 @@
 window.onload = function startMain(){
-    addUsesTokens();
+    const board = document.querySelectorAll('board')[0];
 
-    var html = document.querySelectorAll('board')[0].innerHTML;
-    document.querySelectorAll('board')[0].innerHTML = replaceIcon(html);
+    addUsesTokens();
+    addImages(board);
+
+    var html = board.innerHTML;
+    board.innerHTML = replaceIcon(html);
     adjustComplexityValue();
     createPowerProperties();
 }
@@ -35,6 +38,14 @@ function createPowerProperties(){
     fearTag.style.height = (fearValue * 14) + 'px';
     defenseTag.style.height = (defenseValue * 14) + 'px';
     utilityTag.style.height = (utilityValue * 14) + 'px';
+}
+
+function addImages(board) {
+    const expansion = board.getAttribute('expansion');
+
+    if (expansion) {
+        board.innerHTML = board.innerHTML + `<div class="expansion-icon">${replaceIcon(expansion)}</div>`;
+    }
 }
 
 function addUsesTokens() {
