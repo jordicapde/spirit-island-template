@@ -63,13 +63,6 @@ icon.move-range-4 {
   margin-bottom: 7px;
 }
 
-icon.range-0, icon.range-1, icon.range-2, icon.range-3, icon.range-4 {
-  display: block;
-  height: 45px;
-  width: 130px;
-  margin-top: 11px;
-}
-
 icon.sacred-site {
   width: 50px;
 }

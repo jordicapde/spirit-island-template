@@ -48,9 +48,9 @@ growth-table {
   display: inline-flex;
   width: 1081px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
-  margin-left: 0px;
+  margin-left: 10px;
   justify-content: space-around;
   padding-right: 10px;
   box-sizing: border-box;
@@ -67,7 +67,6 @@ growth-border {
   background-position: center;
   width: 7px;
   height: 125px;
-  margin-top: -30px;
   margin-left: 10px;
   margin-right: 10px;
   opacity: 0.9;
@@ -84,6 +83,10 @@ growth-cell {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(229, 219, 169, 0.3);
+  border-radius: 10px;
+  border: none;
+  padding-top: 10px;
 }
 
 growth-energy {
@@ -140,6 +143,10 @@ custom-presence icon.range-1,
 custom-presence icon.range-2,
 custom-presence icon.range-3,
 custom-presence icon.range-4 {
+  display: block;
+  height: 45px;
+  width: 130px;
+  margin-top: 11px;
   margin-bottom: 10px;
 }
 
