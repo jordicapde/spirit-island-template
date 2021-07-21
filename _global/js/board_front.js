@@ -131,6 +131,9 @@ function parseGrowthTags(){
 
             //Find a parenthesis and split out the string before it
             const growthItem = classPieces[j].split("(")[0];
+            var growthValue = regExp.exec(classPieces[j]);
+            if (growthValue)
+                growthValue = growthValue[1];
 
             switch (growthItem) {
                 case 'reclaim-all':
@@ -175,23 +178,17 @@ function parseGrowthTags(){
                     }
                 case 'gain-energy':
                     {
-                        const matches = regExp.exec(classPieces[j]);
-
-                        const gainEnergyBy = matches[1];
-
-                        if (!isNaN(gainEnergyBy)) {
-                        //Gain Energy has a number in it
-                        newGrowthCellHTML += `${openTag}<growth-energy><value>` + gainEnergyBy + "</value></growth-energy><growth-text>Gain Energy</growth-text></growth-cell>"
-                    } else {
-                        //Gain Energy is not from a number
-                        newGrowthCellHTML += `${openTag}<gain-per><value>1</value></gain-per><` + gainEnergyBy + "></" + gainEnergyBy + "><growth-text>Gain 1 Energy per " + capitalise(gainEnergyBy) + "</growth-text></growth-cell>"
-                    }
+                        if (!isNaN(growthValue)) {
+                            //Gain Energy has a number in it
+                            newGrowthCellHTML += `${openTag}<growth-energy><value>` + growthValue + "</value></growth-energy><growth-text>Gain Energy</growth-text></growth-cell>"
+                        } else {
+                            //Gain Energy is not from a number
+                            newGrowthCellHTML += `${openTag}<gain-per><value>1</value></gain-per><` + growthValue + "></" + growthValue + "><growth-text>Gain 1 Energy per " + capitalise(growthValue) + "</growth-text></growth-cell>"
+                        }
                         break;
                     }
                 case 'add-presence': {
-                    const matches = regExp.exec(classPieces[j]);
-
-                    let presenceOptions = matches[1].split(",");
+                    let presenceOptions = growthValue.split(",");
                     let presenceRange = presenceOptions[0];
                     let presenceReqOpen = "<custom-presence>";
                     let presenceReqClose = "</custom-presence>";
@@ -214,25 +211,21 @@ function parseGrowthTags(){
                     }
                     break;
                 }
-				case 'land-gather':
+				case 'gather':
                     {
-                        const matches = regExp.exec(classPieces[j]);
+                        let range = growthValue.split(",")[0];
+						let gatherNum = growthValue.split(",")[1];
+						let gatherType = growthValue.split(",")[2];
 
-                        console.log(matches)
-						let range = matches[1].split(",")[0];
-						let gatherNum = matches[1].split(",")[1];
-						let gatherType = matches[1].split(",")[2];
-
-                        newGrowthCellHTML += `${openTag}<icon class='` + growthItem + "'><icon class='" + range +
-                            "'></icon></icon><growth-text>" +
-                            " </growth-text></growth-cell>"
+                        newGrowthCellHTML += `${openTag}` +
+                            "<icon class='" + growthItem + "'><icon class='" + gatherType + "'></icon></icon>" +
+                            "<icon class='range-" + range + "'></icon>" +
+                            "<growth-text>Gather up to " + gatherNum + " " + capitalise(gatherType) + " into a Land</growth-text></growth-cell>"
                         break;
                     }
                 case 'push':
                     {
-                        const matches = regExp.exec(classPieces[j]);
-                        const pushTarget = matches[1];
-                        newGrowthCellHTML += `${openTag}<icon class='${growthItem}'><icon class='${pushTarget}'></icon></icon><growth-text>Push ${capitalise(pushTarget)}</growth-text></growth-cell>`;
+                        newGrowthCellHTML += `${openTag}<icon class='${growthItem}'><icon class='${growthValue}'></icon></icon><growth-text>Push ${capitalise(growthValue)}</growth-text></growth-cell>`;
                         break;
                     }
 
@@ -247,21 +240,13 @@ function parseGrowthTags(){
                         break;
                     }
                 case 'move-presence':
-                    {        //Additional things can be done here based on inputs
-                        const matches = regExp.exec(classPieces[j]);
-
-                        const moveRange = matches[1];
-                        newGrowthCellHTML += `${openTag}<custom-presence-special>{presence}{move-range-` + moveRange + "}<growth-text>Move a Presence</growth-text></growth-cell>"
-
+                    {
+                        newGrowthCellHTML += `${openTag}<custom-presence-special>{presence}{move-range-` + growthValue + "}<growth-text>Move a Presence</growth-text></growth-cell>"
                         break;
                     }
                 case 'gain-element':
                     {
-                        const matches = regExp.exec(classPieces[j]);
-
-                        const gainedElement = matches[1];
-
-                        const elementOptions = matches[1].split(",");
+                        const elementOptions = growthValue.split(",");
 
                         //Check if they want 2 elements
                         if (elementOptions.length > 1) {
@@ -289,16 +274,13 @@ function parseGrowthTags(){
                                 newGrowthCellHTML += "</gain><growth-text>Gain " + elementOptions[1] + " " + capitalise(elementOptions[0]) + "</growth-text></growth-cell>";
                             }
                         } else {
-                            newGrowthCellHTML += `${openTag}<gain>{` + gainedElement + "}</gain><growth-text>Gain " + capitalise(gainedElement) + "</growth-text></growth-cell>"                        }
-
-
+                            newGrowthCellHTML += `${openTag}<gain>{` + growthValue + "}</gain><growth-text>Gain " + capitalise(growthValue) + "</growth-text></growth-cell>";
+                        }
                         break;
                     }
                 case 'raw':
                     {
-                        const matches = regExp.exec(classPieces[j]);
-
-                        newGrowthCellHTML += `${openTag}{empty}<growth-text>` + matches[1] + `</growth-text></growth-cell>`
+                        newGrowthCellHTML += `${openTag}{empty}<growth-text>` + growthValue + `</growth-text></growth-cell>`
                         break;
                     }
                 default:

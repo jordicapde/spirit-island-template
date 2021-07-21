@@ -148,13 +148,14 @@ icon.empty {
     width: 90px;
 }
 
-icon.land-gather,
+icon.gather,
 icon.push {
   display: block;
   height: 100px;
   width: 100px;
 }
 
+icon.gather > icon,
 icon.push > icon {
   position: relative;
   text-align: unset;
@@ -175,7 +176,7 @@ icon.gain-card-play { background-image: url('../../images/board/Cardplay_Plus_1.
 icon.gain-power-card { background-image: url('../../images/board/Gaincardicon.png'); }
 icon.forget-power-card { background-image: url('../../images/customIcons/forgetCardIcon.png'); }
 icon.make-fast { background-image: url('../../images/board/fast_power.png'); }
-icon.land-gather { background-image: url('../../images/board/NewIcons/Land Gather.png'); }
+icon.gather { background-image: url('../../images/board/NewIcons/Land Gather.png'); }
 icon.push { background-image: url('../../images/board/NewIcons/Land Push.png'); }
 icon.energy-gain-1 { background-image: url('../../images/board/NewIcons/Energy Gain 1.png'); }
 icon.element { background-image: url('../../images/board/NewIcons/element-star.png'); }

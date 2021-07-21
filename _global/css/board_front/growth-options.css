@@ -197,6 +197,11 @@ growth-cell icon.ignore-range {
   margin-left: 20px;
 }
 
+growth-cell icon.gather>icon {
+  left: 60px;
+  top: 37px;
+}
+
 growth-cell icon.push>icon {
   left: 0px;
   top: 35px;
