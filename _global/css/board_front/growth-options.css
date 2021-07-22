@@ -158,20 +158,6 @@ growth-text {
   box-sizing: border-box;
 }
 
-growth-cell icon.ignore-range {
-  margin-left: 20px;
-}
-
-growth-cell icon.gather>icon {
-  left: 60px;
-  top: 37px;
-}
-
-growth-cell icon.push>icon {
-  left: 0px;
-  top: 35px;
-}
-
 growth-cost {
   font-family: 'Gobold Extra2';
   font-size: 16pt;
@@ -199,25 +185,8 @@ growth-cost::after {
 
 }
 
-presence-special-req {
-  background-image: url('../../images/board/75px_presence.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  display: inline-block;
-  height: 25px;
-  width: 35px;
-  margin-bottom: -7px;
-}
-
-add-presence-req {
-  display: block;
-  font-weight: bold;
-  font-size: 18pt;
-}
-
-growth icon.presence {
-  margin-left: 6px;
+gain {
+    display: flex;
 }
 
 gain-per {
@@ -247,29 +216,22 @@ growth-cell icon {
     margin-bottom: 0px;
 }
 
-growth-cell card-play {
-  background-image: url('../../images/board/card_play.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  height: 70px;
-  margin-left: 25px;
-  margin-top: -39px;
+growth-cell icon.ignore-range {
+  margin-left: 20px;
 }
 
-your-land {
-  background-image: url('../../images/board/NeutralBoard.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
-  height: 70px;
-  margin-top: 35px;
-  margin-left: 12px;
-  margin-bottom: -8px;
+growth-cell icon.gather>icon {
+  left: 60px;
+  top: 37px;
 }
 
-growth-cell gain {
-    display: flex;
+growth-cell icon.push>icon {
+  left: 0px;
+  top: 35px;
+}
+
+growth icon.presence {
+  margin-left: 6px;
 }
 
 growth-cell icon.range-0,
