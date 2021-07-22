@@ -129,6 +129,14 @@ function parseGrowthTags(){
             : "<growth-cell>"
         for (j = 0; j < classPieces.length; j++) {
 
+            var multiItem = classPieces[j].split("+raw-text");
+            if (multiItem.length > 1) {
+                // Items with +raw-text()
+                var growthText = regExp.exec(multiItem[1])[1];
+
+                classPieces[j] = multiItem[0];
+            }
+
             //Find a parenthesis and split out the string before it
             const growthItem = classPieces[j].split("(")[0];
             var growthValue = regExp.exec(classPieces[j]);
@@ -216,11 +224,13 @@ function parseGrowthTags(){
                         let range = growthValue.split(",")[0];
 						let gatherNum = growthValue.split(",")[1];
 						let gatherType = growthValue.split(",")[2];
+						if (!growthText)
+                            growthText = "Gather up to " + gatherNum + " " + capitalise(gatherType) + " into a Land";
 
                         newGrowthCellHTML += `${openTag}` +
                             "<icon class='" + growthItem + "'><icon class='" + gatherType + "'></icon></icon>" +
                             "<icon class='range-" + range + "'></icon>" +
-                            "<growth-text>Gather up to " + gatherNum + " " + capitalise(gatherType) + " into a Land</growth-text></growth-cell>"
+                            "<growth-text>" + growthText + "</growth-text></growth-cell>"
                         break;
                     }
                 case 'push':
@@ -278,9 +288,11 @@ function parseGrowthTags(){
                         }
                         break;
                     }
-                case 'raw':
+                case 'empty':
                     {
-                        newGrowthCellHTML += `${openTag}{empty}<growth-text>` + growthValue + `</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "";
+                        newGrowthCellHTML += `${openTag}{empty}<growth-text>${growthText}</growth-text></growth-cell>`
                         break;
                     }
                 default:
