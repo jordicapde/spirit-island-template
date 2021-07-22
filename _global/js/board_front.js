@@ -130,9 +130,10 @@ function parseGrowthTags(){
         for (j = 0; j < classPieces.length; j++) {
 
             var multiItem = classPieces[j].split("+raw-text");
+            var growthText = undefined;
             if (multiItem.length > 1) {
                 // Items with +raw-text()
-                var growthText = regExp.exec(multiItem[1])[1];
+                growthText = regExp.exec(multiItem[1])[1];
 
                 classPieces[j] = multiItem[0];
             }
