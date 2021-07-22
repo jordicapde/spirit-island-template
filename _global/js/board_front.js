@@ -128,9 +128,10 @@ function parseGrowthTags(){
             ? `<growth-cell header="${headerIndex}">`
             : "<growth-cell>"
         for (j = 0; j < classPieces.length; j++) {
+            var growthIcon = undefined;
+            var growthText = undefined;
 
             var multiItem = classPieces[j].split("+raw-text");
-            var growthText = undefined;
             if (multiItem.length > 1) {
                 // Items with +raw-text()
                 growthText = regExp.exec(multiItem[1])[1];
@@ -140,6 +141,7 @@ function parseGrowthTags(){
 
             //Find a parenthesis and split out the string before it
             const growthItem = classPieces[j].split("(")[0];
+            growthIcon = "{" + growthItem + "}";
             var growthValue = regExp.exec(classPieces[j]);
             if (growthValue)
                 growthValue = growthValue[1];
@@ -147,52 +149,64 @@ function parseGrowthTags(){
             switch (growthItem) {
                 case 'reclaim-all':
                     {
-                        newGrowthCellHTML += `${openTag}{reclaim-all}<growth-text>Reclaim Cards</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "Reclaim Cards";
                         break;
                     }
                 case 'reclaim-one':
                     {
-                        newGrowthCellHTML += `${openTag}{reclaim-one}<growth-text>Reclaim One</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "Reclaim One";
                         break;
                     }
                 case 'gain-power-card':
                     {
-                        newGrowthCellHTML += `${openTag}{gain-power-card}<growth-text>Gain Power Card</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "Gain Power Card";
                         break;
                     }
                 case 'discard-cards':
                     {
-                        newGrowthCellHTML += `${openTag}{discard-cards}<growth-text>Discard 2 Power Cards</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "Discard 2 Power Cards";
                         break;
                     }
                 case 'forget-power-card':
                     {
-                        newGrowthCellHTML += `${openTag}{forget-power-card}<growth-text>Forget Power Card</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "Forget Power Card";
                         break;
                     }
                 case 'gain-card-play':
                     {
-                        newGrowthCellHTML += `${openTag}{gain-card-play}<growth-text>Gain a Card Play</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "Gain a Card Play";
                         break;
                     }
                 case 'gain-energy-card-plays':
                     {
-                        newGrowthCellHTML += `${openTag}{gain-energy-card-plays}<growth-text>Gain Energy equal to Card Plays</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "Gain Energy equal to Card Plays";
                         break;
                     }
                 case 'make-fast':
                     {
-                        newGrowthCellHTML += `${openTag}{make-fast}<growth-text>One of your Powers may be Fast</growth-text></growth-cell>`
+                        if (!growthText)
+                            growthText = "One of your Powers may be Fast";
                         break;
                     }
                 case 'gain-energy':
                     {
                         if (!isNaN(growthValue)) {
                             //Gain Energy has a number in it
-                            newGrowthCellHTML += `${openTag}<growth-energy><value>` + growthValue + "</value></growth-energy><growth-text>Gain Energy</growth-text></growth-cell>"
+                            growthIcon = "<growth-energy><value>" + growthValue + "</value></growth-energy>";
+                            if (!growthText)
+                                growthText = "Gain Energy";
                         } else {
                             //Gain Energy is not from a number
-                            newGrowthCellHTML += `${openTag}<gain-per><value>1</value></gain-per><` + growthValue + "></" + growthValue + "><growth-text>Gain 1 Energy per " + capitalise(growthValue) + "</growth-text></growth-cell>"
+                            growthIcon = "<gain-per><value>1</value></gain-per><" + growthValue + "></" + growthValue + ">";
+                            if (!growthText)
+                                growthText = "Gain 1 Energy per " + capitalise(growthValue);
                         }
                         break;
                     }
@@ -211,11 +225,15 @@ function parseGrowthTags(){
 
                     switch (presenceReq){
                         case 'presence':
-                            newGrowthCellHTML += `${openTag}` + presenceReqOpen + "+{presence}<presence-req>{" + presenceReq + "}</presence-req>{range-" + presenceRange + "}" + presenceReqClose + "<growth-text>Add a Presence to a land with Presence</growth-text></growth-cell>"
+                            growthIcon = presenceReqOpen + "+{presence}<presence-req>{" + presenceReq + "}</presence-req>{range-" + presenceRange + "}" + presenceReqClose;
+                            if (!growthText)
+                                growthText = "Add a Presence to a land with Presence";
                             break;
 
                         default:
-                            newGrowthCellHTML += `${openTag}` + presenceReqOpen + "+{presence}{" + presenceReq + "}{range-" + presenceRange + "}" + presenceReqClose + "<growth-text>Add a Presence</growth-text></growth-cell>"
+                            growthIcon = presenceReqOpen + "+{presence}{" + presenceReq + "}{range-" + presenceRange + "}" + presenceReqClose;
+                            if (!growthText)
+                                growthText = "Add a Presence";
                             break;
                     }
                     break;
@@ -225,34 +243,41 @@ function parseGrowthTags(){
                         let range = growthValue.split(",")[0];
 						let gatherNum = growthValue.split(",")[1];
 						let gatherType = growthValue.split(",")[2];
+
+						growthIcon =
+						    "<icon class='" + growthItem + "'><icon class='" + gatherType + "'></icon></icon>" +
+						    "<icon class='range-" + range + "'></icon>";
 						if (!growthText)
                             growthText = "Gather up to " + gatherNum + " " + capitalise(gatherType) + " into a Land";
-
-                        newGrowthCellHTML += `${openTag}` +
-                            "<icon class='" + growthItem + "'><icon class='" + gatherType + "'></icon></icon>" +
-                            "<icon class='range-" + range + "'></icon>" +
-                            "<growth-text>" + growthText + "</growth-text></growth-cell>"
                         break;
                     }
                 case 'push':
                     {
-                        newGrowthCellHTML += `${openTag}<icon class='${growthItem}'><icon class='${growthValue}'></icon></icon><growth-text>Push ${capitalise(growthValue)}</growth-text></growth-cell>`;
+                        growthIcon = "<icon class='" + growthItem + "'><icon class='" + growthValue + "'></icon></icon>";
+                        if (!growthText)
+                            growthText = "Push " + capitalise(growthValue);
                         break;
                     }
 
                 case 'presence-no-range':
                     {
-                        newGrowthCellHTML += `${openTag}<custom-presence-no-range>+{presence}</custom-presence-no-range><growth-text>Add a Presence to any Land</growth-text></growth-cell>`
+                        growthIcon = "<custom-presence-no-range>+{presence}</custom-presence-no-range>";
+                        if (!growthText)
+                            growthText = "Add a Presence to any Land";
                         break;
                     }
                 case 'ignore-range':
                     {
-                        newGrowthCellHTML += `${openTag}<custom-presence>{ignore-range}</custom-presence><growth-text>You may ignore Range this turn</growth-text></growth-cell>`
+                        growthIcon = "<custom-presence>{ignore-range}</custom-presence>";
+                        if (!growthText)
+                            growthText = "You may ignore Range this turn";
                         break;
                     }
                 case 'move-presence':
                     {
-                        newGrowthCellHTML += `${openTag}<custom-presence-special>{presence}{move-range-` + growthValue + "}<growth-text>Move a Presence</growth-text></growth-cell>"
+                        growthIcon = "<custom-presence-special>{presence}{move-range-" + growthValue + "}";
+                        if (!growthText)
+                            growthText = "Move a Presence";
                         break;
                     }
                 case 'gain-element':
@@ -263,29 +288,31 @@ function parseGrowthTags(){
                         if (elementOptions.length > 1) {
                             if (isNaN(elementOptions[1])) {
                                 //They want different elements
-                                var gainText = "Gain ";
-                                newGrowthCellHTML += openTag + "<gain class='element-" + elementOptions.length + "'>";
+                                growthIcon = "<gain class='element-" + elementOptions.length + "'>";
+                                growthText = "Gain ";
 
                                 for (var i = 0; i < elementOptions.length; i++) {
-                                    newGrowthCellHTML += "{" + elementOptions[i] + "}";
-                                    gainText += capitalise(elementOptions[i]);
+                                    growthIcon += "{" + elementOptions[i] + "}";
+                                    growthText += capitalise(elementOptions[i]);
 
                                     if (i == elementOptions.length - 2)
-                                        gainText += " or ";
+                                        growthText += " or ";
                                     else if (i < elementOptions.length - 2)
-                                        gainText += ", ";
+                                        growthText += ", ";
                                 }
-                                newGrowthCellHTML += "</gain><growth-text>" + gainText + "</growth-text></growth-cell>";
+                                growthIcon += "</gain>";
                             } else {
-                                //They just want 2 of the same element
-                                newGrowthCellHTML += `${openTag}<gain>`
-                                newGrowthCellHTML += "<icon-top>{" + elementOptions[0] + "}</icon-top>";
-                                newGrowthCellHTML += "<icon-bottom>{" + elementOptions[0] + "}</icon-bottom>";
-
-                                newGrowthCellHTML += "</gain><growth-text>Gain " + elementOptions[1] + " " + capitalise(elementOptions[0]) + "</growth-text></growth-cell>";
+                                growthIcon =
+                                    "<gain>" +
+                                    "<icon-top>{" + elementOptions[0] + "}</icon-top>" +
+                                    "<icon-bottom>{" + elementOptions[0] + "}</icon-bottom>" +
+                                    "</gain>";
+                                growthText = "Gain " + elementOptions[1] + " " + capitalise(elementOptions[0]);
                             }
                         } else {
-                            newGrowthCellHTML += `${openTag}<gain>{` + growthValue + "}</gain><growth-text>Gain " + capitalise(growthValue) + "</growth-text></growth-cell>";
+                            growthIcon = "<gain>{" + growthValue + "}</gain>";
+                            if (!growthText)
+                                growthText = "Gain " + capitalise(growthValue);
                         }
                         break;
                     }
@@ -293,11 +320,12 @@ function parseGrowthTags(){
                     {
                         if (!growthText)
                             growthText = "";
-                        newGrowthCellHTML += `${openTag}{empty}<growth-text>${growthText}</growth-text></growth-cell>`
                         break;
                     }
                 default:
             }
+
+            newGrowthCellHTML += `${openTag}<growth-icon>${growthIcon}</growth-icon><growth-text>${growthText}</growth-text></growth-cell>`
         }
 
         if (nextElement && nextElement.nodeName.toLowerCase() == 'growth-group') {

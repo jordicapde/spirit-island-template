@@ -89,6 +89,10 @@ growth-cell {
   padding-top: 10px;
 }
 
+growth-icon {
+    min-height: 100px;
+}
+
 growth-energy {
   background-image: url('../../images/board/AddEnergyBlank.png');
   background-repeat: no-repeat;
@@ -97,7 +101,7 @@ growth-energy {
   display: block;
   height: 110px;
   width: 110px;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 growth-energy value {
@@ -108,46 +112,19 @@ growth-energy value {
   margin-left: 25px;
 }
 
-custom-presence-req {
-  font-size: 20pt;
-  font-weight: bold;
-  margin-top: -45px;
-  margin-bottom: 26px;
-  width: auto;
-  height: 110px;
-  display: block;
-}
-
-custom-presence {
-  font-size: 20pt;
-  font-weight: bold;
-  display: block;
-  margin-top: 4px;
-  width: auto;
-  height: 110px;
-  margin-bottom: -22px;
-}
-
+custom-presence-req,
+custom-presence,
 custom-presence-no-range {
   font-size: 20pt;
   font-weight: bold;
   display: block;
+}
+
+custom-presence-no-range {
   width: auto;
   height: 110px;
   margin-bottom: -74px;
   margin-top: 55px;
-}
-
-custom-presence icon.range-0,
-custom-presence icon.range-1,
-custom-presence icon.range-2,
-custom-presence icon.range-3,
-custom-presence icon.range-4 {
-  display: block;
-  height: 45px;
-  width: 130px;
-  margin-top: 11px;
-  margin-bottom: 10px;
 }
 
 custom-presence-req icon.dahan {
@@ -172,22 +149,10 @@ presence-req {
   display: block;
 }
 
-growth-cell icon.discard-cards,
-growth-cell icon.make-fast,
-growth-cell icon.reclaim-all,
-growth-cell icon.reclaim-one,
-growth-cell icon.ignore-range,
-growth-cell icon.gain-power-card,
-growth-cell icon.gain-card-play,
-growth-cell icon.forget-power-card {
-  margin-bottom: 7px;
-}
-
 growth-text {
   font-family: 'Lato SemiBold';
   font-size: 14pt;
   font-style: italic;
-  margin-top: 0px;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
@@ -277,6 +242,11 @@ gain-per value {
   margin-left: 11px;
 }
 
+growth-cell icon {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 growth-cell card-play {
   background-image: url('../../images/board/card_play.png');
   background-repeat: no-repeat;
@@ -300,6 +270,17 @@ your-land {
 
 growth-cell gain {
     display: flex;
+}
+
+growth-cell icon.range-0,
+growth-cell icon.range-1,
+growth-cell icon.range-2,
+growth-cell icon.range-3,
+growth-cell icon.range-4 {
+  display: block;
+  height: 45px;
+  width: 130px;
+  margin-top: 7px;
 }
 
 growth-cell gain icon.fire,

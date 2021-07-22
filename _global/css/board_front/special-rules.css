@@ -55,8 +55,10 @@ special-rule icon.explorer {
     margin-right: -5px;
 }
 
-special-rule icon.range-plus-1,
-special-rule icon.range-1 {
+special-rule icon.range-1, special-rule icon.range-plus-1,
+special-rule icon.range-2, special-rule icon.range-plus-2,
+special-rule icon.range-3, special-rule icon.range-plus-3,
+special-rule icon.range-4, special-rule icon.range-plus-4 {
     width: 50px;
     height: 30px;
     display: inline-block;

@@ -8,15 +8,15 @@ icon {
 icon.energy-gain-card { 
 	background-image: url('../../images/board/NewIcons/Card Gain 1 Energy Pay 2.png'); 
 	display: block;
-	height: 110px;
-	width: 110px;
+	height: 100px;
+	width: 100px;
 }
 
 icon.gain-energy-card-plays {
 	background-image: url('../../images/board/NewIcons/Energy Gain 1 Per Cardplay.png');
 	display: block;
-	height: 110px;
-	width: 110px;
+	height: 100px;
+	width: 100px;
 }
 
 icon.discard-cards {
@@ -151,7 +151,7 @@ icon.empty {
 icon.gather,
 icon.push {
   display: block;
-  height: 100px;
+  height: 80px;
   width: 100px;
 }
 
