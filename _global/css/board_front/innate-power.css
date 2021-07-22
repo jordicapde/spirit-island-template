@@ -191,7 +191,7 @@ threshold {
 
 threshold icon.sun, threshold icon.earth, threshold icon.plant, threshold icon.fire,
 threshold icon.air, threshold icon.moon, threshold icon.animal, threshold icon.water,
-threshold icon.beast, threshold icon.destroyed-presence {
+threshold icon.beasts, threshold icon.destroyed-presence {
     width: 45px;
     height: 45px;
     margin-bottom: -9px;
