@@ -127,7 +127,10 @@ custom-presence-no-range {
   margin-top: 55px;
 }
 
-custom-presence-req icon.dahan {
+custom-presence-req icon.dahan,
+custom-presence-req icon.city,
+custom-presence-req icon.town,
+custom-presence-req icon.blight {
     display: block;
     height: 45px;
     width: 45px;
@@ -146,7 +149,10 @@ presence-req icon.presence {
 }
 
 presence-req {
-  display: block;
+    display: block;
+    font-weight: normal;
+    font-family: 'DK Snemand';
+    text-transform: uppercase;
 }
 
 growth-text {

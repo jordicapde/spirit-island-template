@@ -169,6 +169,7 @@ note {
 note icon.city,
 note icon.town,
 note icon.explorer,
+note icon.dahan,
 note icon.fear {
     margin-top: 1px;
 }
@@ -247,11 +248,12 @@ innate-info-target icon.spirit {
   margin-top: 0px;
 }
 
-.description icon.range-0, .description icon.range-1, .description icon.range-2,
-.description icon.range-3, .description icon.range-4 {
+.description icon.range-0, .description icon.range-1, .description icon.range-2, .description icon.range-3, .description icon.range-4,
+.description icon.range-plus-1, .description icon.range-plus-2, .description icon.range-plus-3, .description icon.range-plus-4{
     width: 45px;
     height: 30px;
-    margin-left: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .description icon.sun, .description icon.earth, .description icon.plant,
@@ -262,4 +264,8 @@ innate-info-target icon.spirit {
     margin-left: 4px;
     margin-right: 4px;
     margin-bottom: -8px;
+}
+
+.description icon.disease {
+    margin-top: 1px;
 }

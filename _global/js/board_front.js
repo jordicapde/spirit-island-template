@@ -213,28 +213,17 @@ function parseGrowthTags(){
                 case 'add-presence': {
                     let presenceOptions = growthValue.split(",");
                     let presenceRange = presenceOptions[0];
-                    let presenceReqOpen = "<custom-presence>";
-                    let presenceReqClose = "</custom-presence>";
-                    let presenceReq = "none";
 
-                    if (presenceOptions.length > 1) {
-                        presenceReqOpen = "<custom-presence-req>";
-                        presenceReqClose = "</custom-presence-req>";
-                        presenceReq = presenceOptions[1];
-                    }
+                    if (presenceOptions.length == 1) {
+                        growthIcon = "<custom-presence>+{presence}{range-" + presenceRange + "}</custom-presence>";
+                        if (!growthText)
+                            growthText = "Add a Presence";
 
-                    switch (presenceReq){
-                        case 'presence':
-                            growthIcon = presenceReqOpen + "+{presence}<presence-req>{" + presenceReq + "}</presence-req>{range-" + presenceRange + "}" + presenceReqClose;
-                            if (!growthText)
-                                growthText = "Add a Presence to a land with Presence";
-                            break;
-
-                        default:
-                            growthIcon = presenceReqOpen + "+{presence}{" + presenceReq + "}{range-" + presenceRange + "}" + presenceReqClose;
-                            if (!growthText)
-                                growthText = "Add a Presence";
-                            break;
+                    } else {
+                        growthIcon = "<custom-presence-req>+{presence}<presence-req>" + presenceOptions[1] + "</presence-req>{range-" + presenceRange + "}</custom-presence-req>";
+                        if (!growthText) {
+                            growthText = "Add a Presence to a land with " + capitalise(iconToText(presenceOptions[1]));
+                        }
                     }
                     break;
                 }
