@@ -116,8 +116,9 @@ range {
   text-align: center;
   background-image: url('../../images/rangeicon.png');
   background-repeat: no-repeat;
-  background-position-y: 25px;
+  background-position-y: 24px;
   background-size: contain;
+  font-family: 'Gobold Extra2';
 }
 
 no-range {
@@ -249,9 +250,11 @@ innate-info-target icon.spirit {
 
 .description icon.range-0, .description icon.range-1, .description icon.range-2,
 .description icon.range-3, .description icon.range-4 {
-    width: 45px;
+    width: 65px;
     height: 30px;
-    margin-left: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: -8px;
 }
 
 .description icon.sun, .description icon.earth, .description icon.plant,

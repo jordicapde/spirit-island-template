@@ -51,6 +51,8 @@ special-rule icon.element, special-rule icon.energy-gain-1 {
 }
 
 special-rule icon.explorer {
+    width: 30px;
+    height: 40px;
     margin-left: 1px;
     margin-right: -5px;
 }
@@ -59,7 +61,8 @@ special-rule icon.range-1, special-rule icon.range-plus-1,
 special-rule icon.range-2, special-rule icon.range-plus-2,
 special-rule icon.range-3, special-rule icon.range-plus-3,
 special-rule icon.range-4, special-rule icon.range-plus-4 {
-    width: 50px;
+    width: 65px;
     height: 30px;
     display: inline-block;
+    margin-bottom: -8px;
 }

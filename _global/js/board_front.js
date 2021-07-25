@@ -180,7 +180,7 @@ function parseGrowthTags(){
                 case 'gain-card-play':
                     {
                         if (!growthText)
-                            growthText = "Gain a Card Play";
+                            growthText = "+1 Card Play this turn";
                         break;
                     }
                 case 'gain-energy-card-plays':
@@ -451,7 +451,7 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
 					var matches = regExp.exec(splitOptions[0]);
 					var pushTarget = matches[1];
                     inner = "<icon class='push'><icon class='"+pushTarget+"'></icon></icon>";
-                    subText = "Push " + capitalise(pushTarget);
+                    subText = "Push 1 " + capitalise(pushTarget) + " from 1 of your Lands";
 					break;    
 				case 'move-presence':
 					var matches = regExp.exec(splitOptions[0]);
@@ -461,7 +461,7 @@ function getPresenceNodeHtml(nodeText, first, trackType, addEnergyRing) {
 					break;
 				case 'energy-gain-card':
 					inner = "{energy-gain-card}";
-                    subText = "Pay";
+                    subText = "Pay 2 Energy to Gain a Power Card";
 					break;
                 case 'gain-card-play':
                     inner = "{gain-card-play}";
