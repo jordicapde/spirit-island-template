@@ -191,6 +191,10 @@ growth-cost::after {
 
 }
 
+growth-cost + growth-cell {
+    left: 30px;
+}
+
 gain {
     display: flex;
 }
@@ -227,8 +231,8 @@ growth-cell icon.ignore-range {
 }
 
 growth-cell icon.gather>icon {
-  left: 60px;
-  top: 37px;
+  left: 62px;
+  top: 25px;
 }
 
 growth-cell icon.push>icon {

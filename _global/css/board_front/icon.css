@@ -80,7 +80,9 @@ icon.explorer,
 icon.town,
 icon.city,
 icon.blight,
-icon.minor-power {
+icon.minor-power,
+icon.fast,
+icon.slow {
   width: 30px;
   height: 30px;
   margin-bottom: -8px;
@@ -112,6 +114,13 @@ icon.fear {
 icon.blight {
     margin-left: 4px;
     margin-right: 4px;
+}
+
+icon.fast,
+icon.slow {
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
 }
 
 icon.sand, icon.wetland, icon.jungle, icon.mountain, 
@@ -159,10 +168,10 @@ icon.gather > icon,
 icon.push > icon {
   position: relative;
   text-align: unset;
-  top: 28px;
-  left:30px;
-  width: 25px;
-  height: 25px;
+  top: 20px;
+  left: 22px;
+  width: 30px;
+  height: 30px;
   margin: 0px;
   padding: 0px;
 }

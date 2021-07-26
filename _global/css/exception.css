@@ -1,5 +1,18 @@
-.lure lore-description,
 .grinning lore-description {
+    width: 810px;
+}
+
+.grinning play-style-description {
+    letter-spacing: -1.1px;
+}
+
+.grinning #presence-table tbody tr:nth-child(2) td:nth-child(2) subtext {
+    width: 140%;
+    display: inline-block;
+    margin-left: -18px;
+}
+
+.lure lore-description {
     width: 810px;
 }
 
@@ -16,7 +29,27 @@
 }
 
 .lure sub-section-title+growth-table{
-    margin-top:40px ;
+    margin-top: 15px ;
+}
+
+.minds presence-tracks {
+    padding-bottom: 15px;
+}
+
+.minds #presence-table tbody tr:nth-child(2) td:nth-child(3) subtext {
+    width: 140%;
+    display: inline-block;
+    margin-left: -30px;
+}
+
+.minds note {
+    letter-spacing: -0.5px;
+}
+
+.shroud lore-description {
+    left: 900px;
+    top: 130px;
+    width: 770px;
 }
 
 .shroud special-rules-container {
@@ -29,16 +62,75 @@
 }
 
 .stone growth {
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+}
+
+.stone growth growth-cell:nth-child(3) growth-text {
+    width: 110%;
+}
+
+.stone growth growth-cell:nth-child(3) icon.range-3 {
+    margin-top: 20px;
 }
 
 .stone presence-tracks {
     padding-bottom: 45px;
-    background-size: auto;
+    background-size: cover;
+}
+
+.stone presence-tracks section-title {
+    margin-bottom: 6px;
+}
+
+.stone innate-power-title {
+    letter-spacing: -0.5px;
 }
 
 .volcano lore-description {
     left: 900px;
     top: 130px;
     width: 770px;
+}
+
+.volcano play-style-description {
+    letter-spacing: -1px;
+}
+
+.volcano special-rules-container {
+    width: 650px;
+}
+
+.volcano right {
+    left: 645px;
+    width: 1105px;
+}
+
+.volcano growth-table {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.volcano presence-tracks {
+    padding-bottom: 5px;
+}
+
+.volcano presence-tracks section-title {
+    margin-bottom: 6px;
+}
+
+.volcano innate-power-container innate-power:first-child level {
+    padding-bottom: 15px;
+}
+
+.volcano innate-power-container innate-power:first-child level:last-child {
+    width: 200%;
+}
+
+.volcano innate-power-container innate-power:first-child level:last-child threshold {
+    width: 310px;
+}
+
+.volcano innate-power-container innate-power:first-child level:last-child #single-line {
+    padding-top: 0px;
+    margin-top: -5px;
 }

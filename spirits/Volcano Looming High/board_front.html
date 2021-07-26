@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../../_global/js/board_front.js"></script>
 </head>
 
-<body>
+<body class="volcano">
     <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png" expansion="{jagged-earth}">
 
         <spirit-name>
@@ -18,11 +18,11 @@
             <section-title>SPECIAL RULES</section-title>
             <special-rules-subtitle>MOUNTAIN HOME</special-rules-subtitle>
             <special-rule>
-                Your {presence} may only be added or moved into Mountain.
+                Your {presence} may only be added or moved into Mountains.
             </special-rule>
             <special-rules-subtitle>COLLAPSE IN A BLAST OF LAVA AND STEAM</special-rules-subtitle>
             <special-rule>
-                When your {presence} is destroyed, in that land, deal 1 Damage per destroyed {presence} to both Invaders and to {dahan}.
+                When your {presence} is Destroyed, in that land, deal 1 Damage per Destroyed {presence} to both Invaders and to {dahan}.
             </special-rule>
             <special-rules-subtitle>VOLCANIC PEAKS TOWER OVER THE LANDSCAPE</special-rules-subtitle>
             <special-rule>
@@ -49,7 +49,7 @@
                         range="0"
                         target="any"
                         target-title="TARGET LAND"
-                        note="Destroy X (1 or more) of your {presence} in target land; {destroyed-presence} checks how many you destroyed. This Power does Damage (separately and equally) to both Invaders and {dahan}. Ranges below can't be increased.">
+                        note="Destroy X (1 or more) of your {presence} in target land. {destroyed-presence} (below) checks how many were Destroyed. This Power's Damage is done (separately) to both Invaders and {dahan}. Ranges below can't be increased.">
                     <level threshold="2-fire,2-earth,2-destroyed-presence">
                         In one land within {range-1}, X Damage.
                     </level>
@@ -70,7 +70,7 @@
                         target="any"
                         target-title="TARGET LAND">
                     <level threshold="3-earth">
-                        Add 1 of your destroyed {presence}.
+                        Add 1 of your Destroyed {presence}.
                     </level>
                     <level threshold="3-fire">
                         Gain a Power Card.
@@ -79,7 +79,7 @@
                         Move up to 2 of your {presence} from other lands to target land.
                     </level>
                     <level threshold="5-fire">
-                        Return up to 2 of your destroyed {presence} to your {presence} tracks.
+                        Return up to 2 of your Destroyed {presence} to your {presence} tracks.
                     </level>
                 </quick-innate-power>
             </innate-powers>

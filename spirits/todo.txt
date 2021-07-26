@@ -1,0 +1,19 @@
+> Stone front:
+	afegir icones Minor power a track presència
+	afegir muntanya i presència a 3ra opció growth
+
+> Grinning front:
+	afegir doble línia sota de "pick two"
+
+> Lure front:
+	falta pujar commit a la feina
+	afegir barres a growth-option gain elements
+
+> Minds front:
+	mirar com queda growth-option afegir presencia + beasts
+
+> Volcano front:
+	desactivar width de l'últim threshold del primer innate power
+
+> Shroud front:
+	mirar com queda l'últim growth-option
