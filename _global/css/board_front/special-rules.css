@@ -1,20 +1,28 @@
 special-rules-container {
-  background-image: url('../../images/board/Innate__Special_Rules_Without_Text.png');
-  background-repeat: repeat-y;
-  background-position: top;
-  position: absolute;
-  left: 18px;
-  min-height: 250px; 
-  padding-bottom: 15px;
-  padding-top: 48px;
-  width: 665px;
-  display: flex;
-  flex-direction: column;
-  font-family: 'JosefinSans-Regular';
-  padding-left:15px;
-  padding-right:15px;
-  z-index: -1;
-  opacity: 0.8;
+    position: absolute;
+    left: 18px;
+    min-height: 250px;
+    padding-bottom: 15px;
+    padding-top: 48px;
+    width: 665px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'JosefinSans-Regular';
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+special-rules-container::before {
+    content: '';
+    background-image: url('../../images/board/Innate__Special_Rules_Without_Text.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
 }
 
 special-rules-subtitle {
