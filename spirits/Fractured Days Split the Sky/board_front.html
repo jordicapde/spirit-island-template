@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../../_global/js/board_front.js"></script>
 </head>
 
-<body>
+<body class="fractured">
     <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png" expansion="{jagged-earth}">
 
         <spirit-name>
@@ -18,7 +18,7 @@
             <section-title>SPECIAL RULES</section-title>
             <special-rules-subtitle>FRAGMENTS OF SHATTERED TIME</special-rules-subtitle>
             <special-rule>
-                Each {presence} on this ability represents 1 Time. Many of your Powers require Time as an additional cost. Spend it when you <b>Resolve</b> the Power. (Not when you play it.)
+                Each {presence} on this ability represents 1 Time. Many of your Powers require Time as an additional cost. Spend it when you <b>Resolve</b> the Power. <i>(Not when you play it.)</i>
                 <br>
                 When you <b>Gain 1 Time</b>, put 1 of your {presence} here from your {presence} track (or, optionally, the island). When you <b>Spend 1 Time</b>, return it to a {presence} track - or if you have no free spaces, Destroy it.
             </special-rule>
@@ -30,9 +30,9 @@
 
         <right>
             <growth title="Growth (pick one)">
-                <growth-group values="gain-element(air);reclaim-all;gain-time(2)"></growth-group>
-                <growth-group values="gain-element(moon);gain-power-card;add-presence(2);gain-time(1)"></growth-group>
-                <growth-group values="gain-element(sun);move-presence(4);gain-card-days"></growth-group>
+                <growth-group values="gain-element(air);reclaim-all;empty+raw-text(Gain up to 2 Time)"></growth-group>
+                <growth-group values="gain-element(moon);gain-power-card;add-presence(2);empty+raw-text(x2: Gain 1 Time<br> or +2 Card Plays)"></growth-group>
+                <growth-group values="gain-element(sun);move-presence(4);gain-card-days;empty+raw-text(x3: Gain 1 Time<br> or Gain 2 Energy)"></growth-group>
             </growth>
 
             <presence-tracks>
@@ -61,7 +61,7 @@
                 <quick-innate-power
                         name="Visions of a Shifting Future"
                         speed="slow"
-                        range="any"
+                        range="none"
                         target="yourself"
                         target-title="TARGET">
                     <level threshold="1-sun,2-moon,2-air">

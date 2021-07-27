@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../../_global/js/board_front.js"></script>
 </head>
 
-<body>
+<body class="vengeance">
     <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png" expansion="{jagged-earth}">
 
         <spirit-name>
@@ -18,11 +18,11 @@
             <section-title>SPECIAL RULES</section-title>
             <special-rules-subtitle>THE TERROR OF A SLOWLY UNFOLDING PLAGUE</special-rules-subtitle>
             <special-rule>
-                When {disease} would prevent a Build on a board with your {presence}, you may let the Build happen (removing no {disease}). If you do, 1 {fear}.
+                When {disease} would prevent a Build on a board with your {presence}, you may let the Build happen (Removing no {disease}). If you do, 1 {fear}.
             </special-rule>
             <special-rules-subtitle>LINGERING PESTILENCE</special-rules-subtitle>
             <special-rule>
-                When your {presence} is destroyed by anything except a Spirit action, add 1 {disease} where each destroyed {presence} was.
+                When your {presence} is Destroyed by anything except a Spirit action, add 1 {disease} where each Destroyed {presence} was.
             </special-rule>
             <special-rules-subtitle>WREAK VENGEANCE FOR THE LAND'S CORRUPTION</special-rules-subtitle>
             <special-rule>
@@ -33,7 +33,7 @@
         <right>
             <growth title="Growth (pick one)">
                 <growth-group values="reclaim-all;gain-power-card;gain-energy(1)"></growth-group>
-                <growth-group values="add-presence(2,{city})+raw-text(Add a Presence to a Land with Town/City/Blight);add-presence(2,{blight})+raw-text(Add a Presence to a Land with Town/City/Blight)"></growth-group>
+                <growth-group values="add-presence(2,{city})+raw-text(Add a Presence to a Land with Town/City/Blight);add-presence(2,{city})+raw-text(Add a Presence to a Land with Town/City/Blight)"></growth-group>
                 <growth-group values="gain-power-card;add-presence(1)+raw-text(Add a Presence or a Disease);gain-energy(1)"></growth-group>
             </growth>
 
@@ -49,7 +49,7 @@
                         range="1"
                         target="{disease}"
                         target-title="TARGET LAND"
-                        note="This Power's Damage is dealt (separately) to both Invaders and {dahan}.">
+                        note="This Power's Damage is done (separately) to both Invaders and {dahan}.">
                     <level threshold="1-fire,3-animal">
                         1 Damage per {disease}.
                     </level>
@@ -57,7 +57,7 @@
                         +1 Damage per {disease}.
                     </level>
                     <level threshold="3-water,3-fire,5-animal">
-                        +1 Damage per {disease}. 1 {fear} per {disease} (max 5). Remove 1 {disease}.
+                        +1 Damage per {disease}.<br> 1 {fear} per {disease} (max. 5). Remove 1 {disease}.
                     </level>
                 </quick-innate-power>
                 <quick-innate-power

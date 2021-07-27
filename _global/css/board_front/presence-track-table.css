@@ -119,6 +119,11 @@ presence-node icon {
   height: 65px;
 }
 
+presence-node icon.element {
+  width: 80px;
+  height: 80px;
+}
+
 icon-top {
   transform: translateY(-20px) translateX(14px);
 }

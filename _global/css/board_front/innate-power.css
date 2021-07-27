@@ -23,7 +23,7 @@ innate-powers::after {
     display: block;
     height: 9000px;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.2;
 }
 
 innate-powers section-title {

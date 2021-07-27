@@ -49,13 +49,20 @@ special-rule {
 
 special-rule icon.fire, special-rule icon.earth, special-rule icon.plant,
 special-rule icon.animal, special-rule icon.air, special-rule icon.water,
-special-rule icon.any, special-rule icon.moon, special-rule icon.sun,
-special-rule icon.element, special-rule icon.energy-gain-1 {
+special-rule icon.any, special-rule icon.moon, special-rule icon.sun {
     width: 45px;
     height: 30px;
     margin-bottom: -8px;
     margin-left: -5px;
     margin-right: -5px;
+}
+
+special-rule icon.element {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -15px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 special-rule icon.explorer {
@@ -73,4 +80,12 @@ special-rule icon.range-4, special-rule icon.range-plus-4 {
     height: 30px;
     display: inline-block;
     margin-bottom: -8px;
+}
+
+special-rule icon.energy-gain-1 {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -18px;
+    margin-left: 2px;
+    margin-right: 2px;
 }

@@ -1,3 +1,74 @@
+/*
+* DOWNPOUR DRENCHES THE WORLD
+*/
+.downpour lore-description {
+    left: 900px;
+    top: 140px;
+    width: 770px;
+}
+
+.downpour special-rules-container {
+    width: 645px;
+}
+
+.downpour right {
+  left: 640px;
+  width: 1110px;
+}
+
+.downpour growth-table {
+  width: 1100px;
+}
+
+/*
+* FRACTURED DAYS SPLIT THE SKY
+*/
+.fractured lore-description {
+    top: 125px;
+}
+
+.fractured growth {
+    background-size: cover;
+}
+
+.fractured growth-table {
+    flex-wrap: wrap;
+    margin-top: -5px;
+    margin-bottom: 0px;
+}
+
+.fractured growth-table growth-cell {
+    flex-basis: 13.5%;
+    padding-top: 0px;
+}
+
+.fractured growth-table growth-cell:nth-child(8) {
+    flex-basis: 16.4%;
+}
+
+.fractured growth-table growth-border:nth-child(9) {
+    display: none;
+}
+
+.fractured growth-table growth-cell:nth-child(12) growth-text {
+    width: 130%;
+}
+
+.fractured presence-tracks {
+    padding-bottom: 0px;
+}
+
+.fractured presence-tracks section-title {
+    margin-bottom: 0px;
+}
+
+.fractured presence-tracks table {
+    height: auto;
+}
+
+/*
+* GRINNING TRICKSTER STIRS UP TROUBLE
+*/
 .grinning lore-description {
     width: 810px;
 }
@@ -12,6 +83,9 @@
     margin-left: -18px;
 }
 
+/*
+* LURE OF THE DEEP WILDERNESS
+*/
 .lure lore-description {
     width: 810px;
 }
@@ -32,6 +106,9 @@
     margin-top: 15px ;
 }
 
+/*
+* MANY MINDS MOVE AS ONE
+*/
 .minds presence-tracks {
     padding-bottom: 15px;
 }
@@ -46,6 +123,9 @@
     letter-spacing: -0.5px;
 }
 
+/*
+* SHROUD OF SILENT MIST
+*/
 .shroud lore-description {
     left: 900px;
     top: 130px;
@@ -61,6 +141,18 @@
   width: 1105px;
 }
 
+/*
+* STARLIGHT SEEKS ITS FORM
+*/
+.starlight lore-description {
+    left: 900px;
+    top: 120px;
+    width: 770px;
+}
+
+/*
+* STONE'S UNYIELDING DEFIANCE
+*/
 .stone growth {
     padding-bottom: 0px;
 }
@@ -75,6 +167,9 @@
 
 .stone presence-tracks {
     padding-bottom: 45px;
+}
+
+.stone presence-tracks::before {
     background-size: cover;
 }
 
@@ -86,6 +181,22 @@
     letter-spacing: -0.5px;
 }
 
+/*
+* VENGEANCE AS A BURNING PLAGUE
+*/
+.vengeance lore-description {
+    left: 900px;
+    top: 130px;
+    width: 770px;
+}
+
+.vengeance growth growth-cell:nth-child(5) {
+    margin-right: 20px;
+}
+
+/*
+* VOLCANO LOOMING HIGH
+*/
 .volcano lore-description {
     left: 900px;
     top: 130px;

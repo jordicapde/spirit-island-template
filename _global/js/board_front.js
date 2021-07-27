@@ -159,6 +159,12 @@ function parseGrowthTags(){
                             growthText = "Reclaim One";
                         break;
                     }
+                case 'reclaim-half':
+                    {
+                        if (!growthText)
+                            growthText = "Reclaim Half (round up)";
+                        break;
+                    }
                 case 'gain-power-card':
                     {
                         if (!growthText)
@@ -189,10 +195,16 @@ function parseGrowthTags(){
                             growthText = "Gain Energy equal to Card Plays";
                         break;
                     }
+                case 'gain-card-days':
+                    {
+                        if (!growthText)
+                            growthText = "Gain Power Card from Days That Never Were";
+                        break;
+                    }
                 case 'make-fast':
                     {
                         if (!growthText)
-                            growthText = "One of your Powers may be Fast";
+                            growthText = "One of your Powers is Fast";
                         break;
                     }
                 case 'gain-energy':

@@ -13,3 +13,20 @@
 
 > Volcano front:
 	desactivar width de l'últim threshold del primer innate power
+
+> Vengeance front:
+    growth-option add-presence or disease: afegir "/<icon class="disease"></icon>"
+    growth-options centrals: afegir icones town, blight i barres
+
+> Downpour front:
+    últim presence text ha de ser "2 Water"
+
+> Starlight front:
+    bueno... mil històries
+
+> Fractured front:
+    a growth-options afegir al final:
+        <growth-border style="
+            flex-grow: 0.8;
+        "></growth-border>
+    afegir icones que falten
