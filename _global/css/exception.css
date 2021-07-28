@@ -8,12 +8,16 @@
 }
 
 .downpour special-rules-container {
-    width: 645px;
+    width: 640px;
 }
 
 .downpour right {
-  left: 640px;
-  width: 1110px;
+  left: 635px;
+  width: 1115px;
+}
+
+.downpour presence-tracks table tr::before {
+    margin-left: 10px;
 }
 
 .downpour growth-table {
@@ -133,12 +137,16 @@
 }
 
 .shroud special-rules-container {
-    width: 650px;
+    width: 645px;
 }
 
 .shroud right {
-  left: 645px;
-  width: 1105px;
+  left: 640px;
+  width: 1110px;
+}
+
+.shroud presence-tracks table tr::before {
+    margin-left: 10px;
 }
 
 /*
@@ -208,12 +216,12 @@
 }
 
 .volcano special-rules-container {
-    width: 650px;
+    width: 645px;
 }
 
 .volcano right {
-    left: 645px;
-    width: 1105px;
+    left: 640px;
+    width: 1110px;
 }
 
 .volcano growth-table {
@@ -227,6 +235,10 @@
 
 .volcano presence-tracks section-title {
     margin-bottom: 6px;
+}
+
+.volcano presence-tracks table tr::before {
+    margin-left: 10px;
 }
 
 .volcano innate-power-container innate-power:first-child level {

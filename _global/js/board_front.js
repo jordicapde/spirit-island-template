@@ -340,9 +340,13 @@ function parseGrowthTags(){
 
 function parseEnergyTrackTags(){
     var energyHTML = "<tr>";
+
+    var presenceBorder = document.getElementsByTagName("presence-tracks")[0].getAttribute("border");
+    if (presenceBorder) {
+        energyHTML = "<tr style='background-image: url(" + presenceBorder + ")'>";
+    }
     
     var energyValues = document.getElementsByTagName("energy-track")[0].getAttribute("values");
-
     var energyOptions = energyValues.split(",");
 
     for(i = 0; i < energyOptions.length; i++){
@@ -356,9 +360,13 @@ function parseEnergyTrackTags(){
 
 function parseCardPlayTrackTags(){	
     var cardPlayHTML = "<tr>";
-    
-    var cardPlayValues = document.getElementsByTagName("card-play-track")[0].getAttribute("values");
 
+    var presenceBorder = document.getElementsByTagName("presence-tracks")[0].getAttribute("border");
+    if (presenceBorder) {
+        cardPlayHTML = "<tr style='background-image: url(" + presenceBorder + ")'>";
+    }
+
+    var cardPlayValues = document.getElementsByTagName("card-play-track")[0].getAttribute("values");
     var cardPlayOptions = cardPlayValues.split(",");
 
     for(i = 0; i < cardPlayOptions.length; i++){

@@ -1,5 +1,5 @@
 presence-tracks section-title {
-  margin-left: 2px;
+  margin-left: 40px;
   margin-bottom: 12px;
   padding-top: 0px;
 }
@@ -8,7 +8,6 @@ presence-tracks {
     display: block;
     position: relative;
     margin-left: 10px;
-    padding-left: 50px;
     padding-bottom: 30px;
 }
 
@@ -29,11 +28,23 @@ presence-tracks::before {
 presence-tracks table {	
   display: inline-block;
   height: 340px;
-  margin-left: -40px;
+  border: none;
+  border-collapse: collapse;
+}
+
+presence-tracks table tr {
+    background-size: 100%;
+    background-position-y: 38px;
+    background-repeat: no-repeat;
+}
+
+presence-tracks table tr::before {
+    content: '';
+    margin-left: 40px;
 }
 
 presence-tracks table td {
-  padding: 0px;
+  padding: 3px;
   vertical-align: top;
 }
 
