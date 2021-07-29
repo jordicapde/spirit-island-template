@@ -33,9 +33,9 @@ presence-tracks table {
 }
 
 presence-tracks table tr {
-    background-size: 100% 45px;
+    background-size: 100% 100%;
     background-position-x: right;
-    background-position-y: 46px;
+    background-position-y: -20px;
     background-repeat: no-repeat;
 }
 
@@ -56,6 +56,15 @@ presence-tracks table td[rowspan="2"] {
 presence-node {
   display: inline-table;
   max-width: 130px;
+}
+
+presence-node.blurred {
+    background: radial-gradient(circle at 50% 50%,
+        rgb(255, 255, 255) 0%,
+        rgb(255, 255, 255) 25%,
+        rgba(238, 130, 238, 0) 60%
+    );
+    background-position-y: -10px;
 }
 
 subtext {

@@ -70,6 +70,7 @@ spirit-name {
   z-index: -1;
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: contain;
 }
 
 .spirit-image {
