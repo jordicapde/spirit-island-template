@@ -33,8 +33,9 @@ presence-tracks table {
 }
 
 presence-tracks table tr {
-    background-size: 100%;
-    background-position-y: 38px;
+    background-size: 100% 45px;
+    background-position-x: right;
+    background-position-y: 46px;
     background-repeat: no-repeat;
 }
 

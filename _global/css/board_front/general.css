@@ -67,9 +67,9 @@ spirit-name {
   top: -50%;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: right center;
 }
 
 .spirit-image {
