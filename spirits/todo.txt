@@ -20,6 +20,7 @@
 
 > Downpour front:
     últim presence text ha de ser "2 Water"
+    move presence blurred
 
 > Starlight front:
     bueno... mil històries

@@ -20,6 +20,10 @@
     margin-left: 10px;
 }
 
+.downpour presence-tracks table tr:last-child {
+    background-position-x: -273px;
+}
+
 .downpour growth-table {
   width: 1100px;
 }
@@ -37,7 +41,7 @@
 
 .fractured growth-table {
     flex-wrap: wrap;
-    margin-top: -5px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -68,6 +72,10 @@
 
 .fractured presence-tracks table {
     height: auto;
+}
+
+.fractured innate-power-container level {
+    padding-bottom: 10px;
 }
 
 /*
