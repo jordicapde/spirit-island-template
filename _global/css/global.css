@@ -50,6 +50,14 @@ icon.no::before {
   margin: auto;
 }
 
+icon.blurred {
+    filter:
+        drop-shadow(1px 1px 0 white)
+        drop-shadow(-1px 1px 0 white)
+        drop-shadow(1px -1px 0 white)
+        drop-shadow(-1px -1px 0 white);
+}
+
 icon.spirit{background-image: url('../images/spiriticon.png'); }
 
 icon.badlands{background-image: url('../images/board/badlands.png'); }
