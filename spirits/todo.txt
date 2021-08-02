@@ -1,18 +1,25 @@
 > Stone front:
 	afegir icones Minor power a track presència
 	afegir muntanya i presència a 3ra opció growth
+	afegir blurred class
 
 > Grinning front:
 	afegir doble línia sota de "pick two"
+	afegir blurred class
 
 > Lure front:
 	afegir barres a growth-option gain elements
+	afegir blurred class
 
 > Minds front:
 	corregir '+' growth-option presencia + beasts
 
+> Shroud front:
+    afegir blurred class
+
 > Volcano front:
 	desactivar width de l'últim threshold del primer innate power
+	corregir height special-rules
 
 > Vengeance front:
     growth-option add-presence or disease: afegir "/<icon class="disease"></icon>"
@@ -20,7 +27,7 @@
 
 > Downpour front:
     últim presence text ha de ser "2 Water"
-    move presence blurred
+    afegir blurred class
 
 > Starlight front:
     bueno... mil històries
@@ -30,4 +37,5 @@
         <growth-border style="
             flex-grow: 0.8;
         "></growth-border>
+    corregir height special-rules
     afegir icones que falten
