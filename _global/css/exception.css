@@ -99,6 +99,10 @@
     margin-left: -18px;
 }
 
+.grinning presence-tracks table tr:first-child {
+    background-position-x: -125px;
+}
+
 /*
 * LURE OF THE DEEP WILDERNESS
 */
@@ -182,10 +186,10 @@
     width: 770px;
 }
 
-.starlight right {
+/*.starlight right {
     left: 600px;
     width: 660px;
-}
+}*/
 
 .starlight growth {
     padding-bottom: 30px;
@@ -289,6 +293,22 @@
 
 .vengeance growth growth-cell:nth-child(5) {
     margin-right: 20px;
+}
+
+.vengeance growth growth-cell:nth-child(5) growth-text {
+    width: 110%;
+}
+
+.vengeance growth growth-cell:nth-child(6) growth-text {
+    width: 110%;
+}
+
+.vengeance presence-tracks table tr {
+    background-position-y: -10px;
+}
+
+.vengeance presence-tracks table tr:first-child {
+    background-position-x: -275px;
 }
 
 /*
