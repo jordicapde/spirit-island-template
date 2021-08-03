@@ -182,6 +182,63 @@
     width: 770px;
 }
 
+.starlight right {
+    left: 600px;
+    width: 660px;
+}
+
+.starlight growth {
+    padding-bottom: 30px;
+}
+
+.starlight growth-table {
+    margin-left: 0px;
+    width: 661px;
+
+    background-image: url('../../spirits/Starlight Seeks Its Form/spirit_border2.png');
+    background-size: 120% 100%;
+    background-position-y: -10px;
+    background-repeat: no-repeat;
+
+    /*
+    2st & 3rd growth rows
+    */
+    /*background-position-x: -645px;*/
+
+    /*
+    4th & 5th growth rows
+    */
+    background-position-x: -520px;
+}
+
+/*
+2st & 3rd growth rows
+*/
+/*
+.starlight growth growth-cell:first-child {
+    background-color: transparent;
+}
+.starlight growth growth-border:nth-child(2) {
+    display: none;
+}
+*/
+
+/*
+4th & 5th growth rows
+*/
+.starlight growth growth-cell:first-child {
+    margin-left: 8px;
+    background-color: transparent;
+}
+.starlight growth growth-cell:nth-child(2) {
+    background-color: transparent;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+.starlight growth growth-border:nth-child(3) {
+    display: none;
+}
+
 /*
 * STONE'S UNYIELDING DEFIANCE
 */

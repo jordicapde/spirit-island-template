@@ -317,6 +317,12 @@ function parseGrowthTags(){
                         }
                         break;
                     }
+                case 'presence-ring':
+                    {
+                        if (!growthText)
+                            growthText = "";
+                        break;
+                    }
                 case 'empty':
                     {
                         if (!growthText)

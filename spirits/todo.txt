@@ -30,7 +30,8 @@
     afegir blurred class
 
 > Starlight front:
-    bueno... mil històries
+    3r growth: afegir +1s, icona element
+    4rt growth: afegir +1s, icona damage
 
 > Fractured front:
     a growth-options afegir al final:

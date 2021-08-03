@@ -26,6 +26,13 @@ icon.discard-cards {
   width:90px;
 }
 
+icon.presence-ring {
+	background-image: url('../../images/board/CardPlayRing.png');
+	display: block;
+	height: 125px;
+	width: 125px;
+}
+
 icon.none {
   display:none;
 }

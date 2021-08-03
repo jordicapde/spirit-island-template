@@ -7,7 +7,7 @@
     <script type="text/javascript" src="../../_global/js/board_front.js"></script>
 </head>
 
-<body>
+<body class="starlight">
     <board spirit-image="spirit_front.jpg" spirit-border="spirit_border.png" expansion="{jagged-earth}">
 
         <spirit-name>
@@ -31,18 +31,34 @@
 
         <right>
             <growth title="Growth (pick three)">
+                <!--
                 <growth-group values="reclaim-one"></growth-group>
                 <growth-group values="add-presence(0)"></growth-group>
                 <growth-group values="gain-energy(1)"></growth-group>
                 <growth-group values="move-presence(3)"></growth-group>
-
+                -->
 
                 <!--
-                <growth-group values="reclaim-half;gain-power-card;move-presence(1)"></growth-group>
-                <growth-group values="gain-energy(3);gain-card-play;move-presence(2)"></growth-group>
-                <growth-group values="reclaim-all;gain-power-card;gain-energy(1)"></growth-group>
-                <growth-group values="add-presence(0)+raw-text(2 Damage at Range 0);gain-card-play;make-fast"></growth-group>
+                <growth-group values="presence-ring"></growth-group>
+                <growth-group values="reclaim-half"></growth-group>
+                <growth-group values="gain-power-card;move-presence(1)"></growth-group>
                 -->
+
+                <!--
+                <growth-group values="presence-ring"></growth-group>
+                <growth-group values="gain-energy(3)"></growth-group>
+                <growth-group values="gain-card-play;move-presence(2)"></growth-group>
+                -->
+
+                <!--
+                <growth-group values="presence-ring;presence-ring+raw-text(Element)"></growth-group>
+                <growth-group values="reclaim-all"></growth-group>
+                <growth-group values="gain-power-card;gain-energy(1)"></growth-group>
+                -->
+
+                <growth-group values="presence-ring;presence-ring"></growth-group>
+                <growth-group values="add-presence(0)+raw-text(2 Damage at Range 0)"></growth-group>
+                <growth-group values="gain-card-play;make-fast"></growth-group>
             </growth>
 
             <presence-tracks border="spirit_border2.png">
